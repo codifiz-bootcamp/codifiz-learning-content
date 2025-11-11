@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week -4, Day 1: Computer Setup & VS Code | AI Full-Stack Bootcamp</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/lesson.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <nav class="lesson-nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <div class="lesson-info">
+                <span class="week-badge">Week -4</span>
+                <span class="day-badge">Day 1</span>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="lesson-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="lesson-sidebar">
+            <div class="progress-overview">
+                <h3>Your Progress</h3>
+                <div class="progress-circle">
+                    <svg viewBox="0 0 36 36" class="circular-progress">
+                        <path class="circle-bg"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path class="circle"
+                            stroke-dasharray="0, 100"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                    </svg>
+                    <div class="progress-text">0%</div>
+                </div>
+            </div>
+
+            <nav class="day-navigation">
+                <h4>Week -4 Days</h4>
+                <a href="day1.html" class="day-link active">
+                    <span class="day-number">1</span>
+                    <span class="day-title">Computer Setup & VS Code</span>
+                </a>
+                <a href="day2.html" class="day-link">
+                    <span class="day-number">2</span>
+                    <span class="day-title">Command Line Fundamentals</span>
+                </a>
+                <a href="day3.html" class="day-link">
+                    <span class="day-number">3</span>
+                    <span class="day-title">Git & GitHub Setup</span>
+                </a>
+                <a href="day4.html" class="day-link">
+                    <span class="day-number">4</span>
+                    <span class="day-title">Node.js & Package Management</span>
+                </a>
+                <a href="day5.html" class="day-link">
+                    <span class="day-number">5</span>
+                    <span class="day-title">GitHub Copilot & AI Assistants</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="lesson-content">
+            <header class="lesson-header">
+                <h1>Day 1: Computer Setup & VS Code Installation</h1>
+                <div class="lesson-meta">
+                    <span><i class="fas fa-clock"></i> 2-3 hours</span>
+                    <span><i class="fas fa-check-circle"></i> 4 tasks</span>
+                    <span><i class="fas fa-code"></i> 1 project</span>
+                </div>
+            </header>
+
+            <!-- Why This Matters Section -->
+            <section class="info-box info-primary">
+                <h3><i class="fas fa-lightbulb"></i> Why This Matters</h3>
+                <p>Professional developers use specialized tools that make coding faster and more efficient. Visual Studio Code (VS Code) is the most popular code editor in the world, used by over 14 million developers. Today, you'll set up your development workspace.</p>
+            </section>
+
+            <!-- Learning Objectives -->
+            <section class="objectives">
+                <h2>Learning Objectives</h2>
+                <p>By the end of this lesson, you will be able to:</p>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" id="obj1" class="task-checkbox" data-task="install-vscode">
+                        <label for="obj1">Install and configure Visual Studio Code</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj2" class="task-checkbox" data-task="install-extensions">
+                        <label for="obj2">Install 5 essential VS Code extensions</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj3" class="task-checkbox" data-task="create-file">
+                        <label for="obj3">Create and open files in VS Code</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj4" class="task-checkbox" data-task="hello-world">
+                        <label for="obj4">Build and view your first "Hello World" webpage</label>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Task 1: Install VS Code -->
+            <section class="lesson-section">
+                <h2><span class="step-number">1</span> Install Visual Studio Code</h2>
+                
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="windows">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                    <button class="tab-button" data-tab="mac">
+                        <i class="fab fa-apple"></i> Mac
+                    </button>
+                    <button class="tab-button" data-tab="linux">
+                        <i class="fab fa-linux"></i> Linux
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="windows">
+                    <h3>Windows Installation</h3>
+                    <ol class="numbered-list">
+                        <li>
+                            <strong>Download VS Code</strong>
+                            <p>Go to <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a></p>
+                            <p>Click "Download for Windows"</p>
+                        </li>
+                        <li>
+                            <strong>Run the Installer</strong>
+                            <p>Open the downloaded file (VSCodeUserSetup-x64-1.x.x.exe)</p>
+                        </li>
+                        <li>
+                            <strong>Important Installation Options</strong>
+                            <div class="info-box info-warning">
+                                <p><strong>Make sure to check these boxes:</strong></p>
+                                <ul>
+                                    <li>✅ Add "Open with Code" action to Windows Explorer file context menu</li>
+                                    <li>✅ Add "Open with Code" action to Windows Explorer directory context menu</li>
+                                    <li>✅ Register Code as an editor for supported file types</li>
+                                    <li>✅ Add to PATH (restart required)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Complete Installation</strong>
+                            <p>Click "Next" → "Install" → "Finish"</p>
+                            <p>VS Code should open automatically!</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="tab-content" id="mac">
+                    <h3>Mac Installation</h3>
+                    <ol class="numbered-list">
+                        <li>
+                            <strong>Download VS Code</strong>
+                            <p>Go to <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a></p>
+                            <p>Click "Download for Mac"</p>
+                        </li>
+                        <li>
+                            <strong>Install the Application</strong>
+                            <p>Open the downloaded .zip file</p>
+                            <p>Drag "Visual Studio Code.app" to your Applications folder</p>
+                        </li>
+                        <li>
+                            <strong>Install Command Line Tools</strong>
+                            <p>Open Terminal (Command + Space, type "Terminal")</p>
+                            <p>Run this command:</p>
+                            <div class="code-block">
+                                <pre><code class="language-bash">sudo xcode-select --install</code></pre>
+                                <button class="copy-button" data-clipboard-text="sudo xcode-select --install">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Open VS Code</strong>
+                            <p>Go to Applications folder and double-click "Visual Studio Code"</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="tab-content" id="linux">
+                    <h3>Linux Installation</h3>
+                    <ol class="numbered-list">
+                        <li>
+                            <strong>For Ubuntu/Debian</strong>
+                            <div class="code-block">
+                                <pre><code class="language-bash">sudo apt update
+sudo apt install code</code></pre>
+                                <button class="copy-button" data-clipboard-text="sudo apt update&#10;sudo apt install code">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>For Fedora/RHEL</strong>
+                            <div class="code-block">
+                                <pre><code class="language-bash">sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo dnf install code</code></pre>
+                                <button class="copy-button" data-clipboard-text="sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc&#10;sudo dnf install code">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Launch VS Code</strong>
+                            <div class="code-block">
+                                <pre><code class="language-bash">code</code></pre>
+                                <button class="copy-button" data-clipboard-text="code">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="verification-box">
+                    <h4><i class="fas fa-check-circle"></i> Verify Installation</h4>
+                    <p>VS Code should now be open on your computer. You should see a Welcome screen with options to customize your editor.</p>
+                </div>
+            </section>
+
+            <!-- Task 2: Install Extensions -->
+            <section class="lesson-section">
+                <h2><span class="step-number">2</span> Install Essential Extensions</h2>
+                
+                <p>Extensions add superpowers to VS Code. Let's install 5 must-have extensions for web development.</p>
+
+                <div class="info-box info-success">
+                    <p><strong>How to install extensions:</strong></p>
+                    <ol>
+                        <li>Click the Extensions icon in the left sidebar (or press <code>Ctrl/Cmd + Shift + X</code>)</li>
+                        <li>Search for the extension name</li>
+                        <li>Click "Install"</li>
+                    </ol>
+                </div>
+
+                <div class="extension-grid">
+                    <div class="extension-card">
+                        <div class="extension-header">
+                            <i class="fas fa-cube"></i>
+                            <h3>Live Server</h3>
+                        </div>
+                        <p class="extension-author">by Ritwick Dey</p>
+                        <p>Opens HTML files in your browser with auto-reload when you save changes. Essential for web development!</p>
+                        <div class="extension-search">
+                            <strong>Search:</strong> "Live Server Ritwick Dey"
+                        </div>
+                    </div>
+
+                    <div class="extension-card">
+                        <div class="extension-header">
+                            <i class="fas fa-cube"></i>
+                            <h3>Prettier</h3>
+                        </div>
+                        <p class="extension-author">by Prettier</p>
+                        <p>Automatically formats your code to make it clean and consistent. Saves tons of time!</p>
+                        <div class="extension-search">
+                            <strong>Search:</strong> "Prettier - Code formatter"
+                        </div>
+                    </div>
+
+                    <div class="extension-card">
+                        <div class="extension-header">
+                            <i class="fas fa-cube"></i>
+                            <h3>ESLint</h3>
+                        </div>
+                        <p class="extension-author">by Microsoft</p>
+                        <p>Finds errors and potential problems in your JavaScript code before you run it.</p>
+                        <div class="extension-search">
+                            <strong>Search:</strong> "ESLint"
+                        </div>
+                    </div>
+
+                    <div class="extension-card">
+                        <div class="extension-header">
+                            <i class="fas fa-cube"></i>
+                            <h3>Auto Rename Tag</h3>
+                        </div>
+                        <p class="extension-author">by Jun Han</p>
+                        <p>When you rename an HTML opening tag, it automatically renames the closing tag. Magic!</p>
+                        <div class="extension-search">
+                            <strong>Search:</strong> "Auto Rename Tag"
+                        </div>
+                    </div>
+
+                    <div class="extension-card">
+                        <div class="extension-header">
+                            <i class="fas fa-cube"></i>
+                            <h3>Path Intellisense</h3>
+                        </div>
+                        <p class="extension-author">by Christian Kohler</p>
+                        <p>Autocompletes file paths as you type. Makes linking files much easier!</p>
+                        <div class="extension-search">
+                            <strong>Search:</strong> "Path Intellisense"
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 3: Configure Settings -->
+            <section class="lesson-section">
+                <h2><span class="step-number">3</span> Configure VS Code Settings</h2>
+                
+                <p>Let's customize VS Code for the best coding experience.</p>
+
+                <ol class="numbered-list">
+                    <li>
+                        <strong>Open Settings</strong>
+                        <p>Press <code>Ctrl + ,</code> (Windows/Linux) or <code>Cmd + ,</code> (Mac)</p>
+                    </li>
+                    <li>
+                        <strong>Open Settings JSON</strong>
+                        <p>Click the icon in the top right that looks like a file with an arrow</p>
+                        <p>Or press <code>Ctrl/Cmd + Shift + P</code> and type "Open Settings (JSON)"</p>
+                    </li>
+                    <li>
+                        <strong>Paste These Settings</strong>
+                        <div class="code-block">
+<pre><code class="language-json">{
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Default Dark+",
+  "editor.fontFamily": "Consolas, 'Courier New', monospace"
+}</code></pre>
+                            <button class="copy-button" data-clipboard-text='{"editor.fontSize": 14,"editor.tabSize": 2,"editor.wordWrap": "on","editor.formatOnSave": true,"files.autoSave": "afterDelay","editor.minimap.enabled": false}'>
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Save Settings</strong>
+                        <p>Press <code>Ctrl/Cmd + S</code> to save</p>
+                    </li>
+                </ol>
+
+                <div class="info-box info-primary">
+                    <h4>What do these settings do?</h4>
+                    <ul>
+                        <li><strong>fontSize</strong>: Makes text easier to read</li>
+                        <li><strong>tabSize</strong>: Uses 2 spaces for indentation (industry standard)</li>
+                        <li><strong>wordWrap</strong>: Long lines wrap instead of scrolling horizontally</li>
+                        <li><strong>formatOnSave</strong>: Automatically formats code when you save</li>
+                        <li><strong>autoSave</strong>: Saves your work automatically after typing</li>
+                        <li><strong>minimap</strong>: Removes the mini code preview (cleaner interface)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Task 4: Create Your First File -->
+            <section class="lesson-section">
+                <h2><span class="step-number">4</span> Create Your First Webpage</h2>
+                
+                <p>Let's build your very first webpage! This is where your coding journey begins. 🚀</p>
+
+                <ol class="numbered-list">
+                    <li>
+                        <strong>Create a New File</strong>
+                        <p>Click "File" → "New File" (or press <code>Ctrl/Cmd + N</code>)</p>
+                    </li>
+                    <li>
+                        <strong>Copy This HTML Code</strong>
+                        <div class="code-block">
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #0066ff;
+        }
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 5px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, Developer World!&lt;/h1&gt;
+    &lt;p&gt;My name is &lt;span class="highlight"&gt;[YOUR NAME]&lt;/span&gt; and I'm learning to code!&lt;/p&gt;
+    
+    &lt;h2&gt;Goals&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Complete the bootcamp pre-work&lt;/li&gt;
+        &lt;li&gt;Build 5 portfolio projects&lt;/li&gt;
+        &lt;li&gt;Land my first developer job&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h2&gt;What I'm Learning Today&lt;/h2&gt;
+    &lt;p&gt;I'm learning how to use VS Code, the most popular code editor for developers. This is my first webpage!&lt;/p&gt;
+    
+    &lt;p&gt;&lt;strong&gt;Date Started:&lt;/strong&gt; [Today's Date]&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            <button class="copy-button">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Personalize It</strong>
+                        <p>Replace <code>[YOUR NAME]</code> with your actual name</p>
+                        <p>Replace <code>[Today's Date]</code> with today's date</p>
+                    </li>
+                    <li>
+                        <strong>Save the File</strong>
+                        <p>Press <code>Ctrl/Cmd + S</code></p>
+                        <p>Save it as <code>hello.html</code> on your Desktop</p>
+                    </li>
+                    <li>
+                        <strong>Open in Browser</strong>
+                        <p>Right-click anywhere in the file</p>
+                        <p>Select "Open with Live Server"</p>
+                        <p>Your browser should automatically open showing your webpage!</p>
+                    </li>
+                </ol>
+
+                <div class="success-box">
+                    <h4><i class="fas fa-trophy"></i> Congratulations!</h4>
+                    <p>You just created your first webpage! This is a huge milestone. You're now officially a developer in training! 🎉</p>
+                </div>
+            </section>
+
+            <!-- Self-Check Questions -->
+            <section class="lesson-section">
+                <h2>Self-Check Questions</h2>
+                <p>Test your understanding of today's lesson:</p>
+                
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <p><strong>1. What is Visual Studio Code?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q1" value="a">
+                                A programming language
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="b">
+                                A code editor used by developers
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="c">
+                                A web browser
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2. Which extension allows you to view HTML files in a browser with auto-reload?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q2" value="a">
+                                Prettier
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="b">
+                                ESLint
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="c">
+                                Live Server
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3. What keyboard shortcut opens the Extensions panel?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q3" value="a">
+                                Ctrl/Cmd + N
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="b">
+                                Ctrl/Cmd + Shift + X
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="c">
+                                Ctrl/Cmd + S
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary check-answers-btn">Check Answers</button>
+                    <div class="quiz-results" style="display: none;"></div>
+                </div>
+            </section>
+
+            <!-- Next Steps -->
+            <section class="next-steps">
+                <h2>What's Next?</h2>
+                <p>Tomorrow, you'll learn how to use the command line to navigate your computer like a pro. This is one of the most important skills for developers!</p>
+                
+                <div class="nav-buttons">
+                    <a href="../../index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                    <a href="day2.html" class="btn btn-primary">
+                        Day 2: Command Line <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/lesson.js"></script>
+</body>
+</html>

@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week -4, Day 2: Command Line Fundamentals | AI Full-Stack Bootcamp</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/lesson.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <nav class="lesson-nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <div class="lesson-info">
+                <span class="week-badge">Week -4</span>
+                <span class="day-badge">Day 2</span>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="lesson-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="lesson-sidebar">
+            <div class="progress-overview">
+                <h3>Your Progress</h3>
+                <div class="progress-circle">
+                    <svg viewBox="0 0 36 36" class="circular-progress">
+                        <path class="circle-bg"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path class="circle"
+                            stroke-dasharray="0, 100"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                    </svg>
+                    <div class="progress-text">0%</div>
+                </div>
+            </div>
+
+            <nav class="day-navigation">
+                <h4>Week -4 Days</h4>
+                <a href="day1.html" class="day-link">
+                    <span class="day-number">1</span>
+                    <span class="day-title">Computer Setup & VS Code</span>
+                </a>
+                <a href="day2.html" class="day-link active">
+                    <span class="day-number">2</span>
+                    <span class="day-title">Command Line Fundamentals</span>
+                </a>
+                <a href="day3.html" class="day-link">
+                    <span class="day-number">3</span>
+                    <span class="day-title">Git & GitHub Setup</span>
+                </a>
+                <a href="day4.html" class="day-link">
+                    <span class="day-number">4</span>
+                    <span class="day-title">Node.js & Package Management</span>
+                </a>
+                <a href="day5.html" class="day-link">
+                    <span class="day-number">5</span>
+                    <span class="day-title">GitHub Copilot & AI Assistants</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="lesson-content">
+            <header class="lesson-header">
+                <h1>Day 2: Command Line Fundamentals</h1>
+                <div class="lesson-meta">
+                    <span><i class="fas fa-clock"></i> 3-4 hours</span>
+                    <span><i class="fas fa-check-circle"></i> 9 commands</span>
+                    <span><i class="fas fa-code"></i> 1 challenge</span>
+                </div>
+            </header>
+
+            <!-- Why This Matters Section -->
+            <section class="info-box info-primary">
+                <h3><i class="fas fa-lightbulb"></i> Why This Matters</h3>
+                <p>The command line (also called terminal, shell, or console) is how developers interact with their computers at a deeper level. While it looks intimidating at first, it's actually faster and more powerful than clicking through folders. <strong>Every professional developer uses the command line daily</strong> for tasks like running code, managing files, using Git, and deploying applications.</p>
+                <p>Fun fact: The command line hasn't changed much in 40+ years because it's so efficient! Once you learn it, these skills transfer everywhere.</p>
+            </section>
+
+            <!-- Learning Objectives -->
+            <section class="objectives">
+                <h2>Learning Objectives</h2>
+                <p>By the end of this lesson, you will be able to:</p>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" id="obj1" class="task-checkbox" data-task="open-terminal">
+                        <label for="obj1">Open and understand the terminal interface</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj2" class="task-checkbox" data-task="navigate-dirs">
+                        <label for="obj2">Navigate your file system using cd, pwd, and ls commands</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj3" class="task-checkbox" data-task="create-files">
+                        <label for="obj3">Create, move, copy, and delete files and folders</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj4" class="task-checkbox" data-task="use-shortcuts">
+                        <label for="obj4">Use Tab completion and command history for faster work</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj5" class="task-checkbox" data-task="complete-challenge">
+                        <label for="obj5">Complete a command line challenge using only the terminal</label>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Opening Terminal -->
+            <section class="lesson-section">
+                <h2><span class="step-number">1</span> Opening Your Terminal</h2>
+                
+                <p>The terminal is a text-based interface to your computer. Let's find and open it!</p>
+
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="windows-open">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                    <button class="tab-button" data-tab="mac-open">
+                        <i class="fab fa-apple"></i> Mac
+                    </button>
+                    <button class="tab-button" data-tab="linux-open">
+                        <i class="fab fa-linux"></i> Linux
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="windows-open">
+                    <h3>Opening Terminal on Windows</h3>
+                    <p>Windows has multiple terminal options. We'll use Command Prompt or PowerShell:</p>
+                    
+                    <h4>Method 1: Search</h4>
+                    <ol class="numbered-list">
+                        <li>
+                            <strong>Press Windows Key</strong>
+                            <p>Type "cmd" or "powershell"</p>
+                        </li>
+                        <li>
+                            <strong>Click the Result</strong>
+                            <p>Select "Command Prompt" or "Windows PowerShell"</p>
+                        </li>
+                    </ol>
+
+                    <h4>Method 2: Keyboard Shortcut</h4>
+                    <p>Press <code>Windows + R</code>, type <code>cmd</code>, and press Enter</p>
+
+                    <h4>Method 3: VS Code Terminal</h4>
+                    <p>Open VS Code and press <code>Ctrl + `</code> (backtick key, usually above Tab)</p>
+
+                    <div class="info-box info-success">
+                        <p><strong>Recommendation:</strong> For this bootcamp, use Git Bash (installed with Git yesterday) or the VS Code integrated terminal. They provide a Unix-like experience that matches what you'll use professionally.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="mac-open">
+                    <h3>Opening Terminal on Mac</h3>
+                    
+                    <h4>Method 1: Spotlight Search</h4>
+                    <ol class="numbered-list">
+                        <li>
+                            <strong>Press Command + Space</strong>
+                            <p>This opens Spotlight Search</p>
+                        </li>
+                        <li>
+                            <strong>Type "Terminal"</strong>
+                            <p>Press Enter when you see Terminal.app</p>
+                        </li>
+                    </ol>
+
+                    <h4>Method 2: Applications Folder</h4>
+                    <p>Go to Applications → Utilities → Terminal</p>
+
+                    <h4>Method 3: VS Code Terminal</h4>
+                    <p>Open VS Code and press <code>Ctrl + `</code> (backtick key)</p>
+
+                    <div class="info-box info-primary">
+                        <p><strong>Pro Tip:</strong> Drag Terminal.app to your Dock for quick access. You'll use it constantly!</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="linux-open">
+                    <h3>Opening Terminal on Linux</h3>
+                    
+                    <h4>Method 1: Keyboard Shortcut</h4>
+                    <p>Press <code>Ctrl + Alt + T</code> (works on most Linux distributions)</p>
+
+                    <h4>Method 2: Application Menu</h4>
+                    <p>Look for "Terminal" in your applications menu</p>
+
+                    <h4>Method 3: VS Code Terminal</h4>
+                    <p>Open VS Code and press <code>Ctrl + `</code> (backtick key)</p>
+                </div>
+
+                <div class="verification-box">
+                    <h4><i class="fas fa-check-circle"></i> Verify Your Terminal is Open</h4>
+                    <p>You should see a window with text that looks something like:</p>
+                    <div class="code-block">
+                        <pre><code class="language-bash">C:\Users\YourName>           (Windows)
+yourname@computer:~$         (Mac/Linux)
+</code></pre>
+                    </div>
+                    <p>This is called the <strong>prompt</strong>. It's waiting for you to type a command!</p>
+                </div>
+            </section>
+
+            <!-- Understanding the Prompt -->
+            <section class="lesson-section">
+                <h2><span class="step-number">2</span> Understanding the Prompt</h2>
+                
+                <p>Let's decode what you're seeing in your terminal.</p>
+
+                <h3>Anatomy of the Command Prompt</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-bash">yourname@computer:~/Documents$
+│        │        │           │
+│        │        │           └─ Prompt symbol ($ for regular user, # for admin)
+│        │        └───────────── Current directory
+│        └────────────────────── Computer name
+└─────────────────────────────── Your username
+</code></pre>
+                </div>
+
+                <div class="info-box info-primary">
+                    <h4>What the Symbols Mean</h4>
+                    <ul>
+                        <li><strong>~</strong> (tilde) - Your home directory (like C:\Users\YourName or /Users/yourname)</li>
+                        <li><strong>$</strong> - Regular user prompt (you have normal permissions)</li>
+                        <li><strong>#</strong> - Admin/root prompt (you have elevated permissions - be careful!)</li>
+                        <li><strong>/</strong> - Directory separator (on Mac/Linux and Git Bash)</li>
+                        <li><strong>\</strong> - Directory separator (on Windows CMD/PowerShell)</li>
+                    </ul>
+                </div>
+
+                <h3>Your First Command: Where Am I?</h3>
+
+                <p>Type this command and press Enter:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash">pwd</code></pre>
+                    <button class="copy-button" data-clipboard-text="pwd">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p><code>pwd</code> stands for "Print Working Directory" - it shows you exactly where you are in your file system.</p>
+
+                <p>You'll see output like:</p>
+                <div class="code-block">
+                    <pre><code class="language-bash">/Users/yourname              (Mac/Linux)
+C:\Users\YourName            (Windows)
+</code></pre>
+                </div>
+
+                <div class="success-box">
+                    <h4><i class="fas fa-trophy"></i> You Just Ran Your First Command!</h4>
+                    <p>See? Not so scary! You just asked your computer "where am I?" and it told you.</p>
+                </div>
+            </section>
+
+            <!-- Essential Commands -->
+            <section class="lesson-section">
+                <h2><span class="step-number">3</span> Essential Navigation Commands</h2>
+                
+                <p>Let's learn the commands you'll use every single day as a developer.</p>
+
+                <h3>Command #1: ls (List)</h3>
+                
+                <p>Shows you what files and folders are in your current location.</p>
+
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="unix-ls">
+                        <i class="fab fa-apple"></i> Mac/Linux
+                    </button>
+                    <button class="tab-button" data-tab="windows-ls">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="unix-ls">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Basic list
+ls
+
+# List with details (size, date, permissions)
+ls -l
+
+# List all files (including hidden ones starting with .)
+ls -a
+
+# List all with details (most useful!)
+ls -la
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="ls&#10;ls -l&#10;ls -a&#10;ls -la">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="windows-ls">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Basic list
+dir
+
+# List with details
+dir /w
+
+# List all files including hidden
+dir /a
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="dir&#10;dir /w&#10;dir /a">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="info-box info-success">
+                        <p><strong>Good News:</strong> If you're using Git Bash, you can use the Mac/Linux commands (ls) instead of dir!</p>
+                    </div>
+                </div>
+
+                <p><strong>Try it now:</strong> Type <code>ls</code> (or <code>dir</code>) and press Enter. You should see a list of files and folders!</p>
+
+                <h3>Command #2: cd (Change Directory)</h3>
+
+                <p>Moves you from one folder to another. Think of it as "clicking into a folder" but with text.</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Go into a folder
+cd FolderName
+
+# Go up one level (to parent directory)
+cd ..
+
+# Go up two levels
+cd ../..
+
+# Go to your home directory
+cd ~              # Mac/Linux
+cd %USERPROFILE%  # Windows CMD
+cd $HOME          # PowerShell
+
+# Go to Desktop
+cd Desktop
+
+# Go to a specific path
+cd /Users/yourname/Documents        # Mac/Linux
+cd C:\Users\YourName\Documents      # Windows
+</code></pre>
+                    <button class="copy-button" data-clipboard-text="cd FolderName&#10;cd ..&#10;cd ../..&#10;cd ~&#10;cd Desktop">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="info-box info-warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Important Notes</h4>
+                    <ul>
+                        <li><strong>Case matters!</strong> <code>cd Desktop</code> is different from <code>cd desktop</code></li>
+                        <li><strong>Spaces matter!</strong> For folders with spaces, use quotes: <code>cd "My Documents"</code></li>
+                        <li><strong>..</strong> means "parent directory" (one level up)</li>
+                        <li><strong>.</strong> means "current directory"</li>
+                    </ul>
+                </div>
+
+                <h3>Practice Exercise: Navigate Around</h3>
+
+                <p>Complete this navigation exercise:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># 1. See where you are
+pwd
+
+# 2. Go to your Desktop
+cd Desktop
+
+# 3. Confirm you're there
+pwd
+
+# 4. See what's on your Desktop
+ls        # Mac/Linux/Git Bash
+dir       # Windows CMD
+
+# 5. Go back up to your home directory
+cd ..
+
+# 6. Confirm you moved
+pwd
+</code></pre>
+                    <button class="copy-button" data-clipboard-text="pwd&#10;cd Desktop&#10;pwd&#10;ls&#10;cd ..&#10;pwd">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- File Operations -->
+            <section class="lesson-section">
+                <h2><span class="step-number">4</span> Creating and Managing Files</h2>
+                
+                <p>Now let's create, move, copy, and delete files - all from the command line!</p>
+
+                <h3>Command #3: mkdir (Make Directory)</h3>
+
+                <p>Creates a new folder.</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Create one folder
+mkdir bootcamp-practice
+
+# Create multiple folders at once
+mkdir folder1 folder2 folder3
+
+# Create nested folders (Mac/Linux/Git Bash)
+mkdir -p projects/week1/day1
+
+# Create nested folders (Windows CMD)
+mkdir projects\week1\day1
+</code></pre>
+                    <button class="copy-button" data-clipboard-text="mkdir bootcamp-practice&#10;mkdir folder1 folder2 folder3&#10;mkdir -p projects/week1/day1">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3>Command #4: touch / new item (Create Files)</h3>
+
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="unix-touch">
+                        <i class="fab fa-apple"></i> Mac/Linux/Git Bash
+                    </button>
+                    <button class="tab-button" data-tab="windows-touch">
+                        <i class="fab fa-windows"></i> Windows CMD
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="unix-touch">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Create a single file
+touch index.html
+
+# Create multiple files at once
+touch file1.txt file2.txt file3.txt
+
+# Create file in a specific folder
+touch projects/readme.md
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="touch index.html&#10;touch file1.txt file2.txt file3.txt">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="windows-touch">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Create a single file
+type nul > index.html
+
+# Create multiple files (use multiple commands)
+type nul > file1.txt
+type nul > file2.txt
+type nul > file3.txt
+
+# Or use echo
+echo. > index.html
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="type nul > index.html&#10;echo. > readme.txt">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <h3>Command #5: cp (Copy)</h3>
+
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="unix-cp">
+                        <i class="fab fa-apple"></i> Mac/Linux/Git Bash
+                    </button>
+                    <button class="tab-button" data-tab="windows-cp">
+                        <i class="fab fa-windows"></i> Windows CMD
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="unix-cp">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Copy a file
+cp original.txt copy.txt
+
+# Copy to a different folder
+cp file.txt ../other-folder/
+
+# Copy a folder and all its contents
+cp -r folder-name copy-of-folder
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="cp original.txt copy.txt&#10;cp file.txt ../other-folder/&#10;cp -r folder-name copy-of-folder">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="windows-cp">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Copy a file
+copy original.txt copy.txt
+
+# Copy to a different folder
+copy file.txt ..\other-folder\
+
+# Copy a folder and all contents
+xcopy folder-name copy-of-folder /E /I
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="copy original.txt copy.txt&#10;copy file.txt ..\other-folder\">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <h3>Command #6: mv (Move/Rename)</h3>
+
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="unix-mv">
+                        <i class="fab fa-apple"></i> Mac/Linux/Git Bash
+                    </button>
+                    <button class="tab-button" data-tab="windows-mv">
+                        <i class="fab fa-windows"></i> Windows CMD
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="unix-mv">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Rename a file
+mv oldname.txt newname.txt
+
+# Move a file to another folder
+mv file.txt ../documents/
+
+# Move and rename at the same time
+mv file.txt ../documents/newname.txt
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="mv oldname.txt newname.txt&#10;mv file.txt ../documents/&#10;mv file.txt ../documents/newname.txt">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="windows-mv">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Rename a file
+ren oldname.txt newname.txt
+
+# Move a file to another folder
+move file.txt ..\documents\
+
+# Move and rename
+move file.txt ..\documents\newname.txt
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="ren oldname.txt newname.txt&#10;move file.txt ..\documents\">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <h3>Command #7: rm (Remove/Delete)</h3>
+
+                <div class="info-box info-warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> DANGER ZONE!</h4>
+                    <p><strong>Files deleted with rm are GONE FOREVER</strong> - they don't go to trash/recycle bin. There's no undo! Always double-check before deleting.</p>
+                </div>
+
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="unix-rm">
+                        <i class="fab fa-apple"></i> Mac/Linux/Git Bash
+                    </button>
+                    <button class="tab-button" data-tab="windows-rm">
+                        <i class="fab fa-windows"></i> Windows CMD
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="unix-rm">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Delete a single file
+rm filename.txt
+
+# Delete multiple files
+rm file1.txt file2.txt
+
+# Delete an empty folder
+rmdir foldername
+
+# Delete a folder and everything in it (CAREFUL!)
+rm -rf foldername
+
+# -r = recursive (includes contents)
+# -f = force (no confirmation)
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="rm filename.txt&#10;rm file1.txt file2.txt&#10;rmdir foldername">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="windows-rm">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Delete a single file
+del filename.txt
+
+# Delete multiple files
+del file1.txt file2.txt
+
+# Delete an empty folder
+rmdir foldername
+
+# Delete a folder and everything in it
+rmdir /s foldername
+
+# /s = recursive
+# /q = quiet (no confirmation)
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="del filename.txt&#10;rmdir foldername&#10;rmdir /s foldername">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Productivity Tips -->
+            <section class="lesson-section">
+                <h2><span class="step-number">5</span> Productivity Shortcuts</h2>
+                
+                <p>These shortcuts will save you HOURS of time. Professional developers use them constantly!</p>
+
+                <h3>Tab Completion 🎯</h3>
+
+                <p>The single most important shortcut! Press <code>Tab</code> to auto-complete file and folder names.</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Instead of typing:
+cd Documents
+
+# Type this and press Tab:
+cd Doc[TAB]
+# It completes to: cd Documents/
+
+# If multiple matches, press Tab twice to see options
+cd D[TAB][TAB]
+# Shows: Desktop  Documents  Downloads
+</code></pre>
+                </div>
+
+                <div class="info-box info-success">
+                    <p><strong>Pro Tip:</strong> Tab completion works for commands too! Type <code>gi[TAB]</code> and it might complete to <code>git</code>.</p>
+                </div>
+
+                <h3>Command History ⏮️</h3>
+
+                <p>Access previously typed commands without retyping!</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Press ↑ (up arrow) - shows previous command
+# Press ↓ (down arrow) - moves forward through history
+# Press Ctrl+R - search through command history (Mac/Linux)
+
+# See all your command history
+history
+
+# Run a previous command by number
+!42    # Runs command #42 from history
+</code></pre>
+                    <button class="copy-button" data-clipboard-text="history">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3>Clear the Screen 🧹</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Mac/Linux/Git Bash
+clear
+
+# Windows CMD
+cls
+
+# Or use keyboard shortcut:
+# Ctrl+L (Mac/Linux)
+# Ctrl+L or type 'cls' (Windows)
+</code></pre>
+                    <button class="copy-button" data-clipboard-text="clear">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3>Stop a Running Command 🛑</h3>
+
+                <p>If a command is taking too long or stuck:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Press: Ctrl+C
+# This cancels the current command
+</code></pre>
+                </div>
+
+                <h3>Other Useful Shortcuts</h3>
+
+                <table style="width: 100%; margin: var(--spacing-lg) 0;">
+                    <thead>
+                        <tr>
+                            <th>Shortcut</th>
+                            <th>What It Does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>Ctrl+A</code></td>
+                            <td>Move cursor to beginning of line</td>
+                        </tr>
+                        <tr>
+                            <td><code>Ctrl+E</code></td>
+                            <td>Move cursor to end of line</td>
+                        </tr>
+                        <tr>
+                            <td><code>Ctrl+U</code></td>
+                            <td>Clear current line</td>
+                        </tr>
+                        <tr>
+                            <td><code>Ctrl+W</code></td>
+                            <td>Delete word before cursor</td>
+                        </tr>
+                        <tr>
+                            <td><code>Ctrl+L</code></td>
+                            <td>Clear screen (same as clear command)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Command Line Challenge -->
+            <section class="lesson-section">
+                <h2><span class="step-number">6</span> Command Line Challenge</h2>
+                
+                <p>Time to put everything together! Complete this challenge using ONLY the command line (no clicking!).</p>
+
+                <div class="info-box info-primary">
+                    <h3>🎯 Challenge: Build a Project Structure</h3>
+                    <p>You're starting a new web project. Create this exact folder structure and files using only terminal commands:</p>
+                </div>
+
+                <div class="code-block">
+                    <pre><code>my-portfolio/
+├── index.html
+├── about.html
+├── contact.html
+├── css/
+│   ├── style.css
+│   └── reset.css
+├── js/
+│   └── main.js
+├── images/
+│   └── (empty for now)
+└── README.md
+</code></pre>
+                </div>
+
+                <h3>Challenge Requirements:</h3>
+
+                <ol class="numbered-list">
+                    <li>
+                        <strong>Start on your Desktop</strong>
+                        <p>Navigate to your Desktop folder</p>
+                    </li>
+                    <li>
+                        <strong>Create the main folder</strong>
+                        <p>Make a folder called <code>my-portfolio</code></p>
+                    </li>
+                    <li>
+                        <strong>Navigate into it</strong>
+                        <p>Change directory into <code>my-portfolio</code></p>
+                    </li>
+                    <li>
+                        <strong>Create all HTML files</strong>
+                        <p>Create <code>index.html</code>, <code>about.html</code>, <code>contact.html</code>, and <code>README.md</code></p>
+                    </li>
+                    <li>
+                        <strong>Create subdirectories</strong>
+                        <p>Make folders for <code>css</code>, <code>js</code>, and <code>images</code></p>
+                    </li>
+                    <li>
+                        <strong>Create CSS files</strong>
+                        <p>Navigate into the <code>css</code> folder and create <code>style.css</code> and <code>reset.css</code></p>
+                    </li>
+                    <li>
+                        <strong>Create JS file</strong>
+                        <p>Navigate to the <code>js</code> folder and create <code>main.js</code></p>
+                    </li>
+                    <li>
+                        <strong>Verify your work</strong>
+                        <p>Navigate back to <code>my-portfolio</code> and list everything to verify the structure</p>
+                    </li>
+                </ol>
+
+                <div class="info-box info-warning">
+                    <h4>Try it yourself first!</h4>
+                    <p>Don't look at the solution below until you've attempted the challenge. Use the commands you learned above!</p>
+                </div>
+
+                <details style="margin-top: var(--spacing-xl);">
+                    <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; padding: var(--spacing-md); background-color: var(--bg-secondary); border-radius: var(--radius-md);">
+                        🔓 Click to Reveal Solution
+                    </summary>
+                    <div style="margin-top: var(--spacing-md);">
+                        <h4>Solution (Mac/Linux/Git Bash):</h4>
+                        <div class="code-block">
+                            <pre><code class="language-bash"># 1. Go to Desktop
+cd Desktop
+
+# 2. Create main folder
+mkdir my-portfolio
+
+# 3. Navigate into it
+cd my-portfolio
+
+# 4. Create HTML and README files
+touch index.html about.html contact.html README.md
+
+# 5. Create subdirectories
+mkdir css js images
+
+# 6. Create CSS files
+cd css
+touch style.css reset.css
+cd ..
+
+# 7. Create JS file
+cd js
+touch main.js
+cd ..
+
+# 8. Verify structure
+ls -R
+
+# Or use tree command if available:
+tree
+</code></pre>
+                            <button class="copy-button" data-clipboard-text="cd Desktop&#10;mkdir my-portfolio&#10;cd my-portfolio&#10;touch index.html about.html contact.html README.md&#10;mkdir css js images&#10;cd css&#10;touch style.css reset.css&#10;cd ..&#10;cd js&#10;touch main.js&#10;cd ..&#10;ls -R">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <h4>Solution (Windows CMD):</h4>
+                        <div class="code-block">
+                            <pre><code class="language-bash"># 1. Go to Desktop
+cd Desktop
+
+# 2. Create main folder
+mkdir my-portfolio
+
+# 3. Navigate into it
+cd my-portfolio
+
+# 4. Create HTML and README files
+type nul > index.html
+type nul > about.html
+type nul > contact.html
+type nul > README.md
+
+# 5. Create subdirectories
+mkdir css
+mkdir js
+mkdir images
+
+# 6. Create CSS files
+cd css
+type nul > style.css
+type nul > reset.css
+cd ..
+
+# 7. Create JS file
+cd js
+type nul > main.js
+cd ..
+
+# 8. Verify structure
+dir /s
+</code></pre>
+                            <button class="copy-button" data-clipboard-text="cd Desktop&#10;mkdir my-portfolio&#10;cd my-portfolio&#10;type nul > index.html&#10;mkdir css js images&#10;cd css&#10;type nul > style.css&#10;type nul > reset.css&#10;cd ..">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="success-box">
+                            <h4><i class="fas fa-trophy"></i> Congratulations!</h4>
+                            <p>If you completed this challenge, you now have a professional project structure created entirely from the command line. This is exactly what developers do every day!</p>
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Bonus Commands -->
+            <section class="lesson-section">
+                <h2><span class="step-number">7</span> Bonus: View File Contents</h2>
+                
+                <p>Sometimes you need to quickly check what's inside a file without opening an editor.</p>
+
+                <h3>Command #8: cat / type (Display File Contents)</h3>
+
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="unix-cat">
+                        <i class="fab fa-apple"></i> Mac/Linux/Git Bash
+                    </button>
+                    <button class="tab-button" data-tab="windows-cat">
+                        <i class="fab fa-windows"></i> Windows CMD
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="unix-cat">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Display entire file
+cat filename.txt
+
+# Display with line numbers
+cat -n filename.txt
+
+# Display multiple files
+cat file1.txt file2.txt
+
+# Create a new file with content
+cat > newfile.txt
+# Type content, then press Ctrl+D to save
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="cat filename.txt&#10;cat -n filename.txt">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="windows-cat">
+                    <div class="code-block">
+                        <pre><code class="language-bash"># Display entire file
+type filename.txt
+
+# Display multiple files
+type file1.txt file2.txt
+
+# In PowerShell, you can also use:
+Get-Content filename.txt
+</code></pre>
+                        <button class="copy-button" data-clipboard-text="type filename.txt">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <h3>Command #9: echo (Print Text)</h3>
+
+                <p>Display text or create simple text files.</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Print text to terminal
+echo "Hello, World!"
+
+# Create a file with content (Mac/Linux/Git Bash)
+echo "# My Project" > README.md
+
+# Append to a file (Mac/Linux/Git Bash)
+echo "More content" >> README.md
+
+# Print a variable (we'll learn this later)
+echo $PATH
+</code></pre>
+                    <button class="copy-button" data-clipboard-text='echo "Hello, World!"&#10;echo "# My Project" > README.md'>
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="info-box info-primary">
+                    <h4>Quick Reference: <code>&gt;</code> vs <code>&gt;&gt;</code></h4>
+                    <ul>
+                        <li><code>&gt;</code> - Creates new file or <strong>overwrites</strong> existing file</li>
+                        <li><code>&gt;&gt;</code> - <strong>Appends</strong> to existing file (or creates if doesn't exist)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Self-Check Questions -->
+            <section class="lesson-section">
+                <h2>Self-Check Questions</h2>
+                <p>Test your understanding of today's lesson:</p>
+                
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <p><strong>1. Which command shows your current location in the file system?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q1" value="a">
+                                ls
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="b">
+                                pwd
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="c">
+                                cd
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2. What does <code>cd ..</code> do?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q2" value="a">
+                                Goes to your home directory
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="b">
+                                Goes up one directory level
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="c">
+                                Lists all files
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3. Which command creates a new folder?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q3" value="a">
+                                touch
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="b">
+                                mkdir
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="c">
+                                newfolder
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>4. What keyboard shortcut auto-completes file names?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q4" value="a">
+                                Enter
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="b">
+                                Ctrl+C
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="c">
+                                Tab
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>5. True or False: Files deleted with <code>rm</code> go to the trash/recycle bin.</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q5" value="a">
+                                True - they're recoverable
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="b">
+                                False - they're permanently deleted
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary check-answers-btn" onclick="checkAnswers()">Check Answers</button>
+                    <div class="quiz-results" style="display: none;"></div>
+                </div>
+            </section>
+
+            <!-- Command Reference -->
+            <section class="lesson-section">
+                <h2>Quick Command Reference</h2>
+                
+                <p>Bookmark this for quick access!</p>
+
+                <table style="width: 100%; margin: var(--spacing-lg) 0;">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>What It Does</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>pwd</code></td>
+                            <td>Show current directory</td>
+                            <td><code>pwd</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>ls</code> / <code>dir</code></td>
+                            <td>List files and folders</td>
+                            <td><code>ls -la</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>cd</code></td>
+                            <td>Change directory</td>
+                            <td><code>cd Desktop</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>mkdir</code></td>
+                            <td>Create folder</td>
+                            <td><code>mkdir my-project</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>touch</code></td>
+                            <td>Create file (Mac/Linux)</td>
+                            <td><code>touch index.html</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>cp</code> / <code>copy</code></td>
+                            <td>Copy file</td>
+                            <td><code>cp file.txt backup.txt</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>mv</code> / <code>move</code></td>
+                            <td>Move/rename file</td>
+                            <td><code>mv old.txt new.txt</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>rm</code> / <code>del</code></td>
+                            <td>Delete file</td>
+                            <td><code>rm file.txt</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>cat</code> / <code>type</code></td>
+                            <td>Display file contents</td>
+                            <td><code>cat README.md</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>clear</code> / <code>cls</code></td>
+                            <td>Clear screen</td>
+                            <td><code>clear</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Next Steps -->
+            <section class="next-steps">
+                <h2>What's Next?</h2>
+                <p>Tomorrow, you'll learn Git and GitHub - the tools developers use to save, share, and collaborate on code. You'll create your first GitHub repository and push code to it!</p>
+                
+                <div class="info-box info-success">
+                    <h4>🎉 You're Building Real Skills!</h4>
+                    <p>The command line is one of those skills that seems scary at first but becomes second nature with practice. Every developer you admire uses these exact commands daily. Keep practicing!</p>
+                </div>
+
+                <div class="nav-buttons">
+                    <a href="day1.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Day 1: VS Code Setup
+                    </a>
+                    <a href="day3.html" class="btn btn-primary">
+                        Day 3: Git & GitHub <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script>
+        // Quiz answers checker
+        function checkAnswers() {
+            const answers = {
+                q1: 'b', // pwd
+                q2: 'b', // Goes up one level
+                q3: 'b', // mkdir
+                q4: 'c', // Tab
+                q5: 'b'  // False - permanently deleted
+            };
+            
+            let correct = 0;
+            let total = Object.keys(answers).length;
+            
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) {
+                    correct++;
+                }
+            }
+            
+            const resultsDiv = document.querySelector('.quiz-results');
+            resultsDiv.style.display = 'block';
+            
+            if (correct === total) {
+                resultsDiv.className = 'quiz-results correct';
+                resultsDiv.innerHTML = `<i class="fas fa-trophy"></i> Perfect! You got ${correct}/${total} correct! You've mastered the command line basics! 🎉`;
+            } else if (correct >= total * 0.6) {
+                resultsDiv.className = 'quiz-results correct';
+                resultsDiv.innerHTML = `<i class="fas fa-check-circle"></i> Good job! You got ${correct}/${total} correct. Review the questions you missed and you'll be a command line pro!`;
+            } else {
+                resultsDiv.className = 'quiz-results incorrect';
+                resultsDiv.innerHTML = `<i class="fas fa-book"></i> You got ${correct}/${total} correct. Take another look at the lesson and try again!`;
+            }
+        }
+
+        // Tab switching functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const tabGroup = this.closest('.task-tabs').nextElementSibling;
+                const targetTab = this.dataset.tab;
+                
+                // Remove active class from all buttons in this group
+                this.parentElement.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Hide all tab contents in this group
+                let sibling = tabGroup;
+                while (sibling && sibling.classList.contains('tab-content')) {
+                    sibling.classList.remove('active');
+                    sibling = sibling.nextElementSibling;
+                }
+                
+                // Show target tab
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+
+        // Copy button functionality
+        document.querySelectorAll('.copy-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const text = this.dataset.clipboardText || 
+                            this.previousElementSibling.textContent;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    this.classList.add('copied');
+                    setTimeout(() => {
+                        this.classList.remove('copied');
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

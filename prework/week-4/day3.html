@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week -4, Day 3: Git & GitHub Setup | AI Full-Stack Bootcamp</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/lesson.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <nav class="lesson-nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <div class="lesson-info">
+                <span class="week-badge">Week -4</span>
+                <span class="day-badge">Day 3</span>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="lesson-layout">
+        <aside class="lesson-sidebar">
+            <div class="progress-overview">
+                <h3>Your Progress</h3>
+                <div class="progress-circle">
+                    <svg viewBox="0 0 36 36" class="circular-progress">
+                        <path class="circle-bg"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path class="circle"
+                            stroke-dasharray="0, 100"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                    </svg>
+                    <div class="progress-text">0%</div>
+                </div>
+            </div>
+
+            <nav class="day-navigation">
+                <h4>Week -4 Days</h4>
+                <a href="day1.html" class="day-link">
+                    <span class="day-number">1</span>
+                    <span class="day-title">Computer Setup & VS Code</span>
+                </a>
+                <a href="day2.html" class="day-link">
+                    <span class="day-number">2</span>
+                    <span class="day-title">Command Line Fundamentals</span>
+                </a>
+                <a href="day3.html" class="day-link active">
+                    <span class="day-number">3</span>
+                    <span class="day-title">Git & GitHub Setup</span>
+                </a>
+                <a href="day4.html" class="day-link">
+                    <span class="day-number">4</span>
+                    <span class="day-title">Node.js & Package Management</span>
+                </a>
+                <a href="day5.html" class="day-link">
+                    <span class="day-number">5</span>
+                    <span class="day-title">GitHub Copilot & AI Assistants</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="lesson-content">
+            <header class="lesson-header">
+                <h1>Day 3: Git & GitHub Setup</h1>
+                <div class="lesson-meta">
+                    <span><i class="fas fa-clock"></i> 3-4 hours</span>
+                    <span><i class="fas fa-check-circle"></i> 7 tasks</span>
+                    <span><i class="fas fa-code"></i> First GitHub repo</span>
+                </div>
+            </header>
+
+            <section class="info-box info-primary">
+                <h3><i class="fas fa-lightbulb"></i> Why This Matters</h3>
+                <p><strong>Git is version control</strong> - think of it as "Track Changes" for your code, but infinitely more powerful. It lets you save snapshots of your work, experiment without fear, and collaborate with other developers.</p>
+                <p><strong>GitHub is where developers live.</strong> Over 100 million developers use GitHub to store, share, and collaborate on code. Your GitHub profile is essentially your developer resume. Every job application will ask for your GitHub username!</p>
+                <p>Together, Git + GitHub = The most important tools in modern software development. 🚀</p>
+            </section>
+
+            <section class="objectives">
+                <h2>Learning Objectives</h2>
+                <p>By the end of this lesson, you will be able to:</p>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" id="obj1" class="task-checkbox">
+                        <label for="obj1">Install and configure Git on your computer</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj2" class="task-checkbox">
+                        <label for="obj2">Create a professional GitHub account</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj3" class="task-checkbox">
+                        <label for="obj3">Initialize a Git repository and make commits</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj4" class="task-checkbox">
+                        <label for="obj4">Push code to GitHub and view it online</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj5" class="task-checkbox">
+                        <label for="obj5">Understand the Git workflow (add, commit, push)</label>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">1</span> Install Git</h2>
+                
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="windows-git">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                    <button class="tab-button" data-tab="mac-git">
+                        <i class="fab fa-apple"></i> Mac
+                    </button>
+                    <button class="tab-button" data-tab="linux-git">
+                        <i class="fab fa-linux"></i> Linux
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="windows-git">
+                    <h3>Install Git on Windows</h3>
+                    <ol class="numbered-list">
+                        <li>
+                            <strong>Download Git</strong>
+                            <p>Go to <a href="https://git-scm.com/download/win" target="_blank">git-scm.com/download/win</a></p>
+                            <p>Download will start automatically</p>
+                        </li>
+                        <li>
+                            <strong>Run the Installer</strong>
+                            <p>Open the downloaded .exe file</p>
+                        </li>
+                        <li>
+                            <strong>Installation Options (IMPORTANT!)</strong>
+                            <div class="info-box info-warning">
+                                <h4>Choose These Settings:</h4>
+                                <ul>
+                                    <li>✅ <strong>Default editor:</strong> Select "Use Visual Studio Code as Git's default editor"</li>
+                                    <li>✅ <strong>PATH environment:</strong> "Git from the command line and also from 3rd-party software"</li>
+                                    <li>✅ <strong>Default branch name:</strong> "Override" and set to <code>main</code></li>
+                                    <li>✅ <strong>Line ending conversions:</strong> "Checkout Windows-style, commit Unix-style"</li>
+                                    <li>✅ <strong>Terminal emulator:</strong> "Use MinTTY"</li>
+                                    <li>✅ <strong>Default pull behavior:</strong> "Default (fast-forward or merge)"</li>
+                                    <li>✅ <strong>Credential helper:</strong> "Git Credential Manager"</li>
+                                    <li>✅ <strong>Extra options:</strong> Check "Enable file system caching"</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Complete Installation</strong>
+                            <p>Click "Install" and wait for completion</p>
+                            <p>You can uncheck "View Release Notes" and click "Finish"</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="tab-content" id="mac-git">
+                    <h3>Install Git on Mac</h3>
+                    <p>Good news! Git is usually pre-installed on Mac. Let's verify:</p>
+                    
+                    <ol class="numbered-list">
+                        <li>
+                            <strong>Check if Git is Installed</strong>
+                            <p>Open Terminal and run:</p>
+                            <div class="code-block">
+                                <pre><code class="language-bash">git --version</code></pre>
+                                <button class="copy-button" data-clipboard-text="git --version">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>If Git is NOT Installed</strong>
+                            <p>macOS will prompt you to install Xcode Command Line Tools. Click "Install" and follow the prompts.</p>
+                            <p>Or install manually:</p>
+                            <div class="code-block">
+                                <pre><code class="language-bash">xcode-select --install</code></pre>
+                                <button class="copy-button" data-clipboard-text="xcode-select --install">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Verify Installation</strong>
+                            <p>Run <code>git --version</code> again. You should see something like:</p>
+                            <div class="code-block">
+                                <pre><code class="language-bash">git version 2.39.0</code></pre>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="tab-content" id="linux-git">
+                    <h3>Install Git on Linux</h3>
+                    
+                    <h4>Ubuntu/Debian:</h4>
+                    <div class="code-block">
+                        <pre><code class="language-bash">sudo apt update
+sudo apt install git</code></pre>
+                        <button class="copy-button" data-clipboard-text="sudo apt update&#10;sudo apt install git">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+
+                    <h4>Fedora/RHEL:</h4>
+                    <div class="code-block">
+                        <pre><code class="language-bash">sudo dnf install git</code></pre>
+                        <button class="copy-button" data-clipboard-text="sudo dnf install git">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+
+                    <h4>Arch Linux:</h4>
+                    <div class="code-block">
+                        <pre><code class="language-bash">sudo pacman -S git</code></pre>
+                        <button class="copy-button" data-clipboard-text="sudo pacman -S git">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="verification-box">
+                    <h4><i class="fas fa-check-circle"></i> Verify Git Installation</h4>
+                    <p>Open your terminal and run:</p>
+                    <div class="code-block">
+                        <pre><code class="language-bash">git --version</code></pre>
+                        <button class="copy-button" data-clipboard-text="git --version">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <p>You should see: <code>git version 2.x.x</code></p>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">2</span> Configure Git</h2>
+                
+                <p>Tell Git who you are. This information will be attached to every commit you make!</p>
+
+                <h3>Set Your Name and Email</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Set your name (use your real name)
+git config --global user.name "Your Full Name"
+
+# Set your email (use the same email you'll use for GitHub!)
+git config --global user.email "youremail@example.com"</code></pre>
+                    <button class="copy-button" data-clipboard-text='git config --global user.name "Your Full Name"&#10;git config --global user.email "youremail@example.com"'>
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="info-box info-warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Important!</h4>
+                    <ul>
+                        <li>Replace "Your Full Name" with your actual name</li>
+                        <li>Use the SAME email you'll register with GitHub</li>
+                        <li>This email will be visible on GitHub - use a professional one</li>
+                    </ul>
+                </div>
+
+                <h3>Verify Your Configuration</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># View all Git settings
+git config --list
+
+# Or check specific values
+git config user.name
+git config user.email</code></pre>
+                    <button class="copy-button" data-clipboard-text="git config --list&#10;git config user.name&#10;git config user.email">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3>Optional: Set Default Branch Name</h3>
+
+                <p>GitHub now uses "main" as the default branch name (instead of "master"):</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash">git config --global init.defaultBranch main</code></pre>
+                    <button class="copy-button" data-clipboard-text="git config --global init.defaultBranch main">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">3</span> Create Your GitHub Account</h2>
+                
+                <p>GitHub is where you'll store all your code online. Let's create a professional account!</p>
+
+                <ol class="numbered-list">
+                    <li>
+                        <strong>Go to GitHub</strong>
+                        <p>Visit <a href="https://github.com" target="_blank">github.com</a></p>
+                    </li>
+                    <li>
+                        <strong>Click "Sign up"</strong>
+                        <p>In the top-right corner</p>
+                    </li>
+                    <li>
+                        <strong>Choose a Professional Username</strong>
+                        <div class="info-box info-success">
+                            <h4>Username Best Practices:</h4>
+                            <p><strong>✅ Good examples:</strong></p>
+                            <ul>
+                                <li><code>john-smith-dev</code></li>
+                                <li><code>sarah-codes</code></li>
+                                <li><code>alex-tech</code></li>
+                                <li><code>jsmith</code> (if available)</li>
+                            </ul>
+                            <p><strong>❌ Avoid:</strong></p>
+                            <ul>
+                                <li><code>cooldude123</code></li>
+                                <li><code>xxprogrammerxx</code></li>
+                                <li><code>ihatecode</code></li>
+                                <li>Anything unprofessional (employers will see this!)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Use the SAME Email</strong>
+                        <p>Use the email you configured in Git (step 2)</p>
+                    </li>
+                    <li>
+                        <strong>Create Strong Password</strong>
+                        <p>At least 15 characters or 8+ with a mix of characters</p>
+                    </li>
+                    <li>
+                        <strong>Complete Email Verification</strong>
+                        <p>Check your email and click the verification link</p>
+                    </li>
+                    <li>
+                        <strong>Choose Free Plan</strong>
+                        <p>The free plan is perfect for learning and building your portfolio</p>
+                    </li>
+                </ol>
+
+                <div class="success-box">
+                    <h4><i class="fas fa-trophy"></i> You Now Have a GitHub Account!</h4>
+                    <p>This is huge! You're now part of the world's largest developer community.</p>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">4</span> Set Up Your GitHub Profile</h2>
+                
+                <p>Make your profile stand out from day one!</p>
+
+                <ol class="numbered-list">
+                    <li>
+                        <strong>Click Your Profile Icon</strong>
+                        <p>Top-right corner → "Your profile"</p>
+                    </li>
+                    <li>
+                        <strong>Click "Edit profile"</strong>
+                        <p>Update these fields:</p>
+                        <div class="info-box info-primary">
+                            <ul>
+                                <li><strong>Name:</strong> Your real name</li>
+                                <li><strong>Bio:</strong> "Aspiring Full-Stack Developer | Learning JavaScript, React, Node.js"</li>
+                                <li><strong>Location:</strong> Your city (helps employers find you)</li>
+                                <li><strong>Website:</strong> Leave blank for now (we'll add your portfolio later)</li>
+                                <li><strong>Twitter:</strong> Optional - only if professional</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Upload a Profile Picture</strong>
+                        <p>Options:</p>
+                        <ul>
+                            <li>Professional photo (best option)</li>
+                            <li>Professional headshot</li>
+                            <li>Recognizable avatar (like from Gravatar)</li>
+                            <li>Avoid: selfies, party photos, blank profiles</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Save Profile</strong>
+                        <p>Scroll down and click "Update profile"</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">5</span> Your First Git Repository</h2>
+                
+                <p>Let's create your first project and track it with Git!</p>
+
+                <h3>Step 5.1: Create a Project Folder</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Navigate to your Desktop
+cd Desktop
+
+# Create a new project folder
+mkdir my-first-repo
+
+# Navigate into it
+cd my-first-repo
+
+# Verify you're in the right place
+pwd</code></pre>
+                    <button class="copy-button" data-clipboard-text="cd Desktop&#10;mkdir my-first-repo&#10;cd my-first-repo&#10;pwd">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3>Step 5.2: Create a README File</h3>
+
+                <p>Every good project has a README that explains what it is!</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Create README.md file
+touch README.md        # Mac/Linux/Git Bash
+type nul > README.md   # Windows CMD</code></pre>
+                    <button class="copy-button" data-clipboard-text="touch README.md">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3>Step 5.3: Add Content to README</h3>
+
+                <p>Open the folder in VS Code:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash">code .</code></pre>
+                    <button class="copy-button" data-clipboard-text="code .">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p>Click on <code>README.md</code> and add this content:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-markdown"># My First Repository
+
+## About Me
+My name is [YOUR NAME] and I'm learning to become a full-stack developer!
+
+## What I'm Learning
+- HTML & CSS
+- JavaScript
+- React
+- Node.js
+- Git & GitHub
+
+## Goals
+- Build 5 projects during pre-work
+- Complete the bootcamp
+- Land my first developer job
+
+## Contact
+- GitHub: [@your-username](https://github.com/your-username)
+- Email: your.email@example.com
+
+---
+Started learning: [Today's Date]</code></pre>
+                    <button class="copy-button" data-clipboard-text="# My First Repository&#10;&#10;## About Me&#10;My name is [YOUR NAME] and I'm learning to become a full-stack developer!">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p>Replace <code>[YOUR NAME]</code> and <code>@your-username</code> with your actual information!</p>
+
+                <p>Save the file (<code>Ctrl/Cmd + S</code>)</p>
+
+                <h3>Step 5.4: Initialize Git</h3>
+
+                <p>Back in your terminal (inside the <code>my-first-repo</code> folder):</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Initialize Git in this folder
+git init</code></pre>
+                    <button class="copy-button" data-clipboard-text="git init">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p>You should see:</p>
+                <div class="code-block">
+                    <pre><code class="language-bash">Initialized empty Git repository in /Users/yourname/Desktop/my-first-repo/.git/</code></pre>
+                </div>
+
+                <div class="info-box info-success">
+                    <h4>What Just Happened?</h4>
+                    <p>Git created a hidden <code>.git</code> folder that will track all changes in this directory. This folder is now a <strong>Git repository</strong>!</p>
+                </div>
+
+                <h3>Step 5.5: Check Git Status</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-bash">git status</code></pre>
+                    <button class="copy-button" data-clipboard-text="git status">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p>You'll see something like:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash">On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present</code></pre>
+                </div>
+
+                <p>This means Git sees <code>README.md</code> but isn't tracking it yet (shown in red).</p>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">6</span> Understanding the Git Workflow</h2>
+                
+                <p>Git has a three-step workflow. Understanding this is CRUCIAL!</p>
+
+                <div class="info-box info-primary">
+                    <h3>The Git Workflow</h3>
+                    <div style="text-align: center; margin: var(--spacing-lg) 0;">
+                        <div style="font-family: monospace; line-height: 2;">
+                            Working Directory → Staging Area → Repository<br>
+                            (Your Files) → (git add) → (git commit) → (git push) → GitHub
+                        </div>
+                    </div>
+                    <ol>
+                        <li><strong>Working Directory:</strong> Your actual files that you edit</li>
+                        <li><strong>Staging Area:</strong> Files you've marked to be saved (with <code>git add</code>)</li>
+                        <li><strong>Repository:</strong> Saved snapshots of your code (with <code>git commit</code>)</li>
+                        <li><strong>GitHub:</strong> Your code backed up online (with <code>git push</code>)</li>
+                    </ol>
+                </div>
+
+                <h3>Step 6.1: Stage Your File</h3>
+
+                <p>"Staging" means telling Git "I want to save this file."</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Stage a single file
+git add README.md
+
+# Or stage all changed files
+git add .
+
+# Check status again
+git status</code></pre>
+                    <button class="copy-button" data-clipboard-text="git add README.md&#10;git status">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p>Now <code>README.md</code> should be green! It's staged and ready to commit.</p>
+
+                <h3>Step 6.2: Commit Your Changes</h3>
+
+                <p>A "commit" is like taking a snapshot. You can always come back to this exact version later!</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash">git commit -m "Initial commit: Add README with project description"</code></pre>
+                    <button class="copy-button" data-clipboard-text='git commit -m "Initial commit: Add README with project description"'>
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="info-box info-success">
+                    <h4>Commit Message Best Practices</h4>
+                    <p><strong>Good commit messages:</strong></p>
+                    <ul>
+                        <li>✅ "Add README with project description"</li>
+                        <li>✅ "Fix login button alignment"</li>
+                        <li>✅ "Update homepage hero section"</li>
+                    </ul>
+                    <p><strong>Bad commit messages:</strong></p>
+                    <ul>
+                        <li>❌ "stuff"</li>
+                        <li>❌ "changes"</li>
+                        <li>❌ "asdfgh"</li>
+                        <li>❌ "idk what I did"</li>
+                    </ul>
+                    <p><strong>Format:</strong> Start with a verb, be specific, use present tense</p>
+                </div>
+
+                <h3>Step 6.3: View Your Commit History</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># See all commits
+git log
+
+# See commits in one line each (cleaner)
+git log --oneline</code></pre>
+                    <button class="copy-button" data-clipboard-text="git log --oneline">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="success-box">
+                    <h4><i class="fas fa-trophy"></i> You Just Made Your First Commit!</h4>
+                    <p>This is a milestone moment. You've saved your first snapshot with Git! 🎉</p>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">7</span> Push to GitHub</h2>
+                
+                <p>Now let's put your code on GitHub so the world can see it!</p>
+
+                <h3>Step 7.1: Create a Repository on GitHub</h3>
+
+                <ol class="numbered-list">
+                    <li>
+                        <strong>Go to GitHub.com</strong>
+                        <p>Make sure you're logged in</p>
+                    </li>
+                    <li>
+                        <strong>Click the "+" Icon</strong>
+                        <p>Top-right corner → "New repository"</p>
+                    </li>
+                    <li>
+                        <strong>Fill Out Repository Details</strong>
+                        <div class="info-box info-primary">
+                            <ul>
+                                <li><strong>Repository name:</strong> <code>my-first-repo</code> (match your local folder name)</li>
+                                <li><strong>Description:</strong> "My first GitHub repository for bootcamp pre-work"</li>
+                                <li><strong>Public or Private:</strong> Choose <strong>Public</strong> (so employers can see it)</li>
+                                <li><strong>Initialize repository:</strong> <strong>DO NOT</strong> check any boxes (we already have files)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Click "Create repository"</strong>
+                        <p>You'll see instructions on the next page</p>
+                    </li>
+                </ol>
+
+                <h3>Step 7.2: Connect Local to GitHub</h3>
+
+                <p>GitHub will show you commands. You need the section: <strong>"…or push an existing repository from the command line"</strong></p>
+
+                <p>Back in your terminal:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Add GitHub as the remote
+git remote add origin https://github.com/YOUR-USERNAME/my-first-repo.git
+
+# Verify the remote was added
+git remote -v</code></pre>
+                    <button class="copy-button" data-clipboard-text="git remote add origin https://github.com/YOUR-USERNAME/my-first-repo.git&#10;git remote -v">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="info-box info-warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Replace YOUR-USERNAME</h4>
+                    <p>Make sure to replace <code>YOUR-USERNAME</code> with your actual GitHub username!</p>
+                </div>
+
+                <h3>Step 7.3: Rename Branch to Main</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-bash">git branch -M main</code></pre>
+                    <button class="copy-button" data-clipboard-text="git branch -M main">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3>Step 7.4: Push Your Code</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-bash">git push -u origin main</code></pre>
+                    <button class="copy-button" data-clipboard-text="git push -u origin main">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p>You'll be prompted for credentials. See next section!</p>
+
+                <h3>Step 7.5: GitHub Authentication</h3>
+
+                <p>GitHub no longer accepts passwords for Git operations. You need a <strong>Personal Access Token</strong>.</p>
+
+                <div class="info-box info-primary">
+                    <h4>Create a Personal Access Token</h4>
+                    <ol>
+                        <li>On GitHub, click your profile icon → <strong>Settings</strong></li>
+                        <li>Scroll to bottom of left sidebar → <strong>Developer settings</strong></li>
+                        <li>Click <strong>Personal access tokens</strong> → <strong>Tokens (classic)</strong></li>
+                        <li>Click <strong>Generate new token</strong> → <strong>Generate new token (classic)</strong></li>
+                        <li>Note: "Bootcamp access token"</li>
+                        <li>Expiration: 90 days (or custom)</li>
+                        <li>Select scopes: Check <strong>repo</strong> (this checks all sub-items automatically)</li>
+                        <li>Click <strong>Generate token</strong></li>
+                        <li><strong>COPY THE TOKEN NOW!</strong> (You won't see it again)</li>
+                        <li>Save it in a password manager</li>
+                    </ol>
+                </div>
+
+                <p>When prompted for password, paste your token (not your GitHub password!)</p>
+
+                <h3>Step 7.6: Verify on GitHub</h3>
+
+                <p>Go to <code>https://github.com/YOUR-USERNAME/my-first-repo</code></p>
+
+                <p>You should see your <code>README.md</code> displayed! 🎉</p>
+
+                <div class="success-box">
+                    <h4><i class="fas fa-trophy"></i> CONGRATULATIONS!</h4>
+                    <p>You just pushed your first code to GitHub! Your README is now live on the internet for the world to see. This is a HUGE milestone! 🚀</p>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">8</span> The Complete Git Workflow</h2>
+                
+                <p>Now that you've done it once, here's the workflow you'll use every day:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># 1. Check what changed
+git status
+
+# 2. Stage your changes
+git add .                    # Stage all files
+git add filename.txt         # Stage specific file
+
+# 3. Commit with a message
+git commit -m "Describe what you changed"
+
+# 4. Push to GitHub
+git push
+
+# That's it! Repeat as needed.</code></pre>
+                    <button class="copy-button" data-clipboard-text='git status&#10;git add .&#10;git commit -m "Describe what you changed"&#10;git push'>
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3>Practice: Make Another Change</h3>
+
+                <p>Let's practice the workflow!</p>
+
+                <ol class="numbered-list">
+                    <li>
+                        <strong>Edit README.md</strong>
+                        <p>Open <code>README.md</code> in VS Code and add a new line at the bottom:</p>
+                        <div class="code-block">
+                            <pre><code class="language-markdown">## Today's Progress
+- Learned Git basics
+- Created my first repository
+- Pushed code to GitHub!</code></pre>
+                        </div>
+                        <p>Save the file</p>
+                    </li>
+                    <li>
+                        <strong>Check Status</strong>
+                        <div class="code-block">
+                            <pre><code class="language-bash">git status</code></pre>
+                            <button class="copy-button" data-clipboard-text="git status">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <p>You'll see <code>README.md</code> is "modified" (shown in red)</p>
+                    </li>
+                    <li>
+                        <strong>Stage, Commit, Push</strong>
+                        <div class="code-block">
+                            <pre><code class="language-bash">git add README.md
+git commit -m "Add today's progress section to README"
+git push</code></pre>
+                            <button class="copy-button" data-clipboard-text='git add README.md&#10;git commit -m "Add today&#39;s progress section to README"&#10;git push'>
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Verify on GitHub</strong>
+                        <p>Refresh your repository page on GitHub. You should see the updated README!</p>
+                    </li>
+                </ol>
+
+                <div class="success-box">
+                    <h4><i class="fas fa-trophy"></i> You Did It Again!</h4>
+                    <p>You just completed the full Git workflow. This is exactly what professional developers do dozens of times per day!</p>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2>Essential Git Commands Reference</h2>
+                
+                <table style="width: 100%; margin: var(--spacing-lg) 0;">
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>What It Does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>git init</code></td>
+                            <td>Create a new Git repository</td>
+                        </tr>
+                        <tr>
+                            <td><code>git status</code></td>
+                            <td>Check what files have changed</td>
+                        </tr>
+                        <tr>
+                            <td><code>git add .</code></td>
+                            <td>Stage all changed files</td>
+                        </tr>
+                        <tr>
+                            <td><code>git add filename</code></td>
+                            <td>Stage a specific file</td>
+                        </tr>
+                        <tr>
+                            <td><code>git commit -m "message"</code></td>
+                            <td>Save a snapshot with a message</td>
+                        </tr>
+                        <tr>
+                            <td><code>git push</code></td>
+                            <td>Upload commits to GitHub</td>
+                        </tr>
+                        <tr>
+                            <td><code>git pull</code></td>
+                            <td>Download changes from GitHub</td>
+                        </tr>
+                        <tr>
+                            <td><code>git log</code></td>
+                            <td>View commit history</td>
+                        </tr>
+                        <tr>
+                            <td><code>git log --oneline</code></td>
+                            <td>View compact commit history</td>
+                        </tr>
+                        <tr>
+                            <td><code>git remote -v</code></td>
+                            <td>View connected GitHub repositories</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="lesson-section">
+                <h2>Self-Check Questions</h2>
+                
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <p><strong>1. What is Git?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q1" value="a">
+                                A website for storing code
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="b">
+                                Version control software that tracks changes in code
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="c">
+                                A programming language
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2. What is the correct order of the Git workflow?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q2" value="a">
+                                commit → add → push
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="b">
+                                add → commit → push
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="c">
+                                push → add → commit
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3. Which command stages ALL changed files?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q3" value="a">
+                                git commit .
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="b">
+                                git add .
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="c">
+                                git push .
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>4. What does <code>git commit -m "message"</code> do?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q4" value="a">
+                                Uploads code to GitHub
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="b">
+                                Saves a snapshot of staged changes with a description
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="c">
+                                Creates a new repository
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>5. Why should your GitHub username be professional?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q5" value="a">
+                                It doesn't matter - no one sees it
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="b">
+                                Employers will look at your GitHub profile when hiring
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="c">
+                                GitHub requires professional usernames
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary check-answers-btn" onclick="checkAnswers()">Check Answers</button>
+                    <div class="quiz-results" style="display: none;"></div>
+                </div>
+            </section>
+
+            <section class="next-steps">
+                <h2>What's Next?</h2>
+                <p>Tomorrow, you'll learn about Node.js and npm - tools that let you run JavaScript outside the browser and use millions of code packages created by other developers!</p>
+                
+                <div class="info-box info-success">
+                    <h4>🎉 Major Milestone!</h4>
+                    <p>You now have Git and GitHub set up - two of the most important tools in a developer's toolbox. You've also made your first commits and pushed code to the cloud. This is exactly what professional developers do every single day!</p>
+                </div>
+
+                <div class="nav-buttons">
+                    <a href="day2.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Day 2: Command Line
+                    </a>
+                    <a href="day4.html" class="btn btn-primary">
+                        Day 4: Node.js & npm <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: 'b', // Version control software
+                q2: 'b', // add → commit → push
+                q3: 'b', // git add .
+                q4: 'b', // Saves a snapshot
+                q5: 'b'  // Employers will see it
+            };
+            
+            let correct = 0;
+            let total = Object.keys(answers).length;
+            
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) {
+                    correct++;
+                }
+            }
+            
+            const resultsDiv = document.querySelector('.quiz-results');
+            resultsDiv.style.display = 'block';
+            
+            if (correct === total) {
+                resultsDiv.className = 'quiz-results correct';
+                resultsDiv.innerHTML = `<i class="fas fa-trophy"></i> Perfect! ${correct}/${total} correct! You've mastered Git & GitHub basics! 🎉`;
+            } else if (correct >= total * 0.6) {
+                resultsDiv.className = 'quiz-results correct';
+                resultsDiv.innerHTML = `<i class="fas fa-check-circle"></i> Good job! ${correct}/${total} correct. Review the missed questions!`;
+            } else {
+                resultsDiv.className = 'quiz-results incorrect';
+                resultsDiv.innerHTML = `<i class="fas fa-book"></i> You got ${correct}/${total} correct. Review the lesson and try again!`;
+            }
+        }
+
+        // Tab switching
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetTab = this.dataset.tab;
+                this.parentElement.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                let sibling = this.parentElement.nextElementSibling;
+                while (sibling && sibling.classList.contains('tab-content')) {
+                    sibling.classList.remove('active');
+                    sibling = sibling.nextElementSibling;
+                }
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+
+        // Copy buttons
+        document.querySelectorAll('.copy-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const text = this.dataset.clipboardText || this.previousElementSibling.textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    this.classList.add('copied');
+                    setTimeout(() => this.classList.remove('copied'), 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
