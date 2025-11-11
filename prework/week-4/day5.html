@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week -4, Day 5: GitHub Copilot & AI Coding Assistants | AI Full-Stack Developer Bootcamp</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/lesson.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-brand">
+                <i class="fas fa-code"></i>
+                AI Full-Stack Bootcamp
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="index.html"><i class="fas fa-book"></i> Week -4</a>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="lesson-layout">
+        <aside class="lesson-sidebar">
+            <div class="progress-circle-container">
+                <svg class="progress-circle" viewBox="0 0 100 100">
+                    <circle class="progress-circle-bg" cx="50" cy="50" r="45"></circle>
+                    <circle class="progress-circle-fill" cx="50" cy="50" r="45"></circle>
+                </svg>
+                <div class="progress-text">
+                    <span class="progress-number">0%</span>
+                </div>
+            </div>
+
+            <nav class="day-navigation">
+                <h3>Week -4 Days</h3>
+                <a href="day1.html" class="day-link">
+                    <span class="day-number">1</span>
+                    <span class="day-title">Computer Setup & VS Code</span>
+                </a>
+                <a href="day2.html" class="day-link">
+                    <span class="day-number">2</span>
+                    <span class="day-title">Command Line Fundamentals</span>
+                </a>
+                <a href="day3.html" class="day-link">
+                    <span class="day-number">3</span>
+                    <span class="day-title">Git & GitHub Setup</span>
+                </a>
+                <a href="day4.html" class="day-link">
+                    <span class="day-number">4</span>
+                    <span class="day-title">Node.js & Package Management</span>
+                </a>
+                <a href="day5.html" class="day-link active">
+                    <span class="day-number">5</span>
+                    <span class="day-title">GitHub Copilot & AI Assistants</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="lesson-content">
+            <header class="lesson-header">
+                <h1>Day 5: GitHub Copilot & AI Coding Assistants</h1>
+                <div class="lesson-meta">
+                    <span><i class="fas fa-clock"></i> 2-3 hours</span>
+                    <span><i class="fas fa-check-circle"></i> 5 tasks</span>
+                    <span><i class="fas fa-robot"></i> AI-powered</span>
+                </div>
+            </header>
+
+            <section class="info-box info-primary">
+                <h3><i class="fas fa-lightbulb"></i> Why This Matters</h3>
+                <p><strong>AI coding assistants are revolutionizing how developers work.</strong> Tools like GitHub Copilot and Cursor AI act as your pair programming partner, suggesting code as you type, explaining complex concepts, and helping you code faster and smarter.</p>
+                <p><strong>The future of coding is collaborative—human + AI.</strong> Studies show developers using AI assistants are 55% more productive. They write code faster, make fewer errors, and spend less time stuck on syntax issues.</p>
+                <p><strong>This is not cheating—it's the new normal.</strong> Just like calculators didn't make math obsolete, AI assistants won't replace developers. They amplify your abilities, letting you focus on solving problems instead of memorizing syntax! 🚀</p>
+            </section>
+
+            <section class="objectives">
+                <h2>Learning Objectives</h2>
+                <p>By the end of this lesson, you will be able to:</p>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" id="obj1" class="task-checkbox">
+                        <label for="obj1">Understand what AI coding assistants are and how they work</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj2" class="task-checkbox">
+                        <label for="obj2">Set up and configure GitHub Copilot</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj3" class="task-checkbox">
+                        <label for="obj3">Install and use Cursor AI editor</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj4" class="task-checkbox">
+                        <label for="obj4">Write effective prompts to get better AI suggestions</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj5" class="task-checkbox">
+                        <label for="obj5">Build a real project using AI assistance</label>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">1</span> What Are AI Coding Assistants?</h2>
+                
+                <p>AI coding assistants are tools powered by large language models (LLMs) that help you write code.</p>
+
+                <h3>How They Work</h3>
+
+                <div class="info-box info-primary">
+                    <ol>
+                        <li><strong>Context Awareness:</strong> They read your code, comments, and file names</li>
+                        <li><strong>Pattern Recognition:</strong> They've learned from billions of lines of public code</li>
+                        <li><strong>Smart Suggestions:</strong> They predict what you're trying to write next</li>
+                        <li><strong>On-Demand Help:</strong> You can ask questions and get explanations</li>
+                    </ol>
+                </div>
+
+                <h3>Popular AI Coding Assistants</h3>
+
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>What It Does</th>
+                            <th>Best For</th>
+                            <th>Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>GitHub Copilot</strong></td>
+                            <td>Autocomplete on steroids. Suggests whole functions.</td>
+                            <td>VS Code users, inline suggestions</td>
+                            <td>$10/month (Free for students!)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cursor</strong></td>
+                            <td>AI-first code editor. Chat with your codebase.</td>
+                            <td>Full AI integration, codebase questions</td>
+                            <td>Free tier, $20/month Pro</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ChatGPT</strong></td>
+                            <td>General-purpose AI. Great for learning concepts.</td>
+                            <td>Explanations, debugging, learning</td>
+                            <td>Free tier, $20/month Plus</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Claude</strong></td>
+                            <td>Context-aware AI. Handles large codebases.</td>
+                            <td>Code review, architecture questions</td>
+                            <td>Free tier, $20/month Pro</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box info-warning">
+                    <h4>⚠️ Important Notes:</h4>
+                    <ul>
+                        <li><strong>AI assistants suggest, you decide.</strong> Always review and understand the code.</li>
+                        <li><strong>They make mistakes.</strong> AI-generated code isn't always perfect or secure.</li>
+                        <li><strong>Learning still matters.</strong> Use AI to accelerate learning, not replace it.</li>
+                        <li><strong>Don't blindly copy-paste.</strong> Understand what the code does first.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">2</span> Setting Up GitHub Copilot</h2>
+                
+                <p>GitHub Copilot integrates directly into VS Code and suggests code as you type.</p>
+
+                <h3>Step 1: Get GitHub Copilot Access</h3>
+
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="student">
+                        <i class="fas fa-graduation-cap"></i> Students (FREE!)
+                    </button>
+                    <button class="tab-button" data-tab="paid">
+                        <i class="fas fa-credit-card"></i> Paid Plan
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="student">
+                    <h4>Students Get Copilot FREE!</h4>
+                    <ol class="numbered-list">
+                        <li>
+                            <strong>Apply for GitHub Student Developer Pack</strong>
+                            <p>Go to <a href="https://education.github.com/pack" target="_blank">education.github.com/pack</a></p>
+                        </li>
+                        <li>
+                            <strong>Verify Your Student Status</strong>
+                            <p>Upload proof of enrollment (student ID, transcript, or school email)</p>
+                        </li>
+                        <li>
+                            <strong>Get Approved</strong>
+                            <p>Usually takes 1-2 days. You'll get an email when approved.</p>
+                        </li>
+                        <li>
+                            <strong>Benefits Include:</strong>
+                            <ul>
+                                <li>GitHub Copilot (FREE - normally $10/month)</li>
+                                <li>GitHub Pro (unlimited private repos)</li>
+                                <li>Free domain name for 1 year</li>
+                                <li>$100+ in cloud credits</li>
+                                <li>Many more developer tools!</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="tab-content" id="paid">
+                    <h4>Paid Copilot Plan</h4>
+                    <ol class="numbered-list">
+                        <li>Go to <a href="https://github.com/features/copilot" target="_blank">github.com/features/copilot</a></li>
+                        <li>Click "Start my free trial" (30 days free)</li>
+                        <li>After trial: $10/month for individuals</li>
+                    </ol>
+                </div>
+
+                <h3>Step 2: Install Copilot Extension in VS Code</h3>
+
+                <ol class="numbered-list">
+                    <li>
+                        <strong>Open VS Code Extensions</strong>
+                        <p>Click the Extensions icon (or press <code>Ctrl+Shift+X</code> / <code>Cmd+Shift+X</code>)</p>
+                    </li>
+                    <li>
+                        <strong>Search for "GitHub Copilot"</strong>
+                        <p>Type "GitHub Copilot" in the search box</p>
+                    </li>
+                    <li>
+                        <strong>Install Both Extensions:</strong>
+                        <ul>
+                            <li><strong>GitHub Copilot</strong> - The main extension</li>
+                            <li><strong>GitHub Copilot Chat</strong> - For conversational coding help</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Sign In</strong>
+                        <p>Click "Sign in to GitHub" in the popup and authorize the extension</p>
+                    </li>
+                </ol>
+
+                <h3>Step 3: Verify Copilot is Working</h3>
+
+                <div class="verification-box">
+                    <h4><i class="fas fa-check-circle"></i> Quick Test</h4>
+                    <ol>
+                        <li>Create a new file called <code>test.js</code></li>
+                        <li>Type this comment:</li>
+                    </ol>
+                    <div class="code-block">
+                        <pre><code class="language-javascript">// function to calculate the area of a circle</code></pre>
+                        <button class="copy-button" data-clipboard-text="// function to calculate the area of a circle">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <ol start="3">
+                        <li>Press <code>Enter</code> and wait 1-2 seconds</li>
+                        <li>Copilot should suggest code in gray text!</li>
+                        <li>Press <code>Tab</code> to accept the suggestion</li>
+                    </ol>
+                </div>
+
+                <div class="success-box">
+                    <h4>🎉 It's Working!</h4>
+                    <p>If you see gray text suggestions, Copilot is active! If not, check that you're signed in and have Copilot access.</p>
+                </div>
+
+                <h3>Copilot Keyboard Shortcuts</h3>
+
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Windows/Linux</th>
+                            <th>Mac</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Accept suggestion</td>
+                            <td><code>Tab</code></td>
+                            <td><code>Tab</code></td>
+                        </tr>
+                        <tr>
+                            <td>Reject suggestion</td>
+                            <td><code>Esc</code></td>
+                            <td><code>Esc</code></td>
+                        </tr>
+                        <tr>
+                            <td>Next suggestion</td>
+                            <td><code>Alt+]</code></td>
+                            <td><code>Option+]</code></td>
+                        </tr>
+                        <tr>
+                            <td>Previous suggestion</td>
+                            <td><code>Alt+[</code></td>
+                            <td><code>Option+[</code></td>
+                        </tr>
+                        <tr>
+                            <td>Open Copilot Chat</td>
+                            <td><code>Ctrl+Shift+I</code></td>
+                            <td><code>Cmd+Shift+I</code></td>
+                        </tr>
+                        <tr>
+                            <td>Inline Chat</td>
+                            <td><code>Ctrl+I</code></td>
+                            <td><code>Cmd+I</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">3</span> Installing Cursor AI</h2>
+                
+                <p>Cursor is an AI-first code editor built on VS Code. It's designed for AI-assisted development from the ground up.</p>
+
+                <h3>Why Use Cursor?</h3>
+
+                <div class="info-box info-primary">
+                    <ul>
+                        <li><strong>Chat with your codebase:</strong> Ask questions about how your code works</li>
+                        <li><strong>AI-powered editing:</strong> Select code and ask AI to modify it</li>
+                        <li><strong>Composer mode:</strong> AI can edit multiple files at once</li>
+                        <li><strong>Built-in terminal AI:</strong> Get command suggestions</li>
+                        <li><strong>Free tier available:</strong> 50 AI requests per day on free plan</li>
+                    </ul>
+                </div>
+
+                <h3>Install Cursor</h3>
+
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="windows-cursor">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                    <button class="tab-button" data-tab="mac-cursor">
+                        <i class="fab fa-apple"></i> Mac
+                    </button>
+                    <button class="tab-button" data-tab="linux-cursor">
+                        <i class="fab fa-linux"></i> Linux
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="windows-cursor">
+                    <ol class="numbered-list">
+                        <li>Go to <a href="https://cursor.com" target="_blank">cursor.com</a></li>
+                        <li>Click "Download for Windows"</li>
+                        <li>Run the installer (<code>Cursor Setup.exe</code>)</li>
+                        <li>Follow installation wizard</li>
+                        <li>Launch Cursor</li>
+                    </ol>
+                </div>
+
+                <div class="tab-content" id="mac-cursor">
+                    <ol class="numbered-list">
+                        <li>Go to <a href="https://cursor.com" target="_blank">cursor.com</a></li>
+                        <li>Click "Download for Mac"</li>
+                        <li>Open the <code>.dmg</code> file</li>
+                        <li>Drag Cursor to Applications folder</li>
+                        <li>Launch Cursor from Applications</li>
+                    </ol>
+                </div>
+
+                <div class="tab-content" id="linux-cursor">
+                    <ol class="numbered-list">
+                        <li>Go to <a href="https://cursor.com" target="_blank">cursor.com</a></li>
+                        <li>Download the AppImage or .deb file</li>
+                        <li>Make it executable:</li>
+                    </ol>
+                    <div class="code-block">
+                        <pre><code class="language-bash">chmod +x Cursor-*.AppImage
+./Cursor-*.AppImage</code></pre>
+                        <button class="copy-button" data-clipboard-text="chmod +x Cursor-*.AppImage">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <h3>First-Time Setup</h3>
+
+                <ol class="numbered-list">
+                    <li>
+                        <strong>Sign In or Skip</strong>
+                        <p>You can sign in with GitHub/Google or skip for now</p>
+                    </li>
+                    <li>
+                        <strong>Import VS Code Settings (Optional)</strong>
+                        <p>Cursor can import your VS Code extensions and settings</p>
+                    </li>
+                    <li>
+                        <strong>Choose AI Model</strong>
+                        <p>Go to Settings → Models → Choose Claude, GPT-4, or others</p>
+                    </li>
+                    <li>
+                        <strong>Try the AI Chat</strong>
+                        <p>Press <code>Cmd+L</code> (Mac) or <code>Ctrl+L</code> (Windows/Linux) to open AI chat</p>
+                    </li>
+                </ol>
+
+                <div class="info-box info-success">
+                    <h4>💡 Pro Tip: Use Both!</h4>
+                    <p>Many developers use <strong>VS Code with Copilot</strong> for daily work and <strong>Cursor</strong> when they need deeper AI assistance. You don't have to choose one or the other!</p>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">4</span> Writing Effective AI Prompts</h2>
+                
+                <p>AI assistants are powerful, but the quality of their output depends on the quality of your input. Here's how to write great prompts:</p>
+
+                <h3>The CLEAR Prompting Framework</h3>
+
+                <div class="info-box info-primary">
+                    <ul>
+                        <li><strong>C</strong>ontext: What are you building? What's the purpose?</li>
+                        <li><strong>L</strong>anguage/Stack: What technologies should be used?</li>
+                        <li><strong>E</strong>xpectations: What should the code do?</li>
+                        <li><strong>A</strong>ctions: What specific task needs to be done?</li>
+                        <li><strong>R</strong>equirements: Any constraints or specific requirements?</li>
+                    </ul>
+                </div>
+
+                <h3>Examples: Bad vs Good Prompts</h3>
+
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th style="background-color: rgba(239, 68, 68, 0.1);">❌ Bad Prompt</th>
+                            <th style="background-color: rgba(34, 197, 94, 0.1);">✅ Good Prompt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>// make a function</code></pre>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>// Create a JavaScript function that validates email addresses
+// Should return true for valid emails, false otherwise
+// Must handle edge cases like multiple @ signs</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>// login page</code></pre>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>// Create a React login page component with:
+// - Email and password input fields
+// - Form validation
+// - Submit button
+// - Error message display
+// - Responsive design using Tailwind CSS</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>// fix this</code></pre>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>// This function should sort an array of numbers in ascending order
+// but it's not working correctly. Please fix the logic error.
+// Expected: [1, 2, 3, 4, 5]
+// Getting: [1, 3, 2, 5, 4]</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Comment-Driven Development</h3>
+
+                <p>Write comments describing what you want, then let AI fill in the code!</p>
+
+                <div class="code-block">
+                    <pre><code class="language-javascript">// TODO: Create a function called fetchUserData
+// - Takes a userId parameter
+// - Fetches data from the API at https://api.example.com/users/{userId}
+// - Returns the user object
+// - Handles errors gracefully with try/catch
+// - Shows a loading state while fetching
+
+</code></pre>
+                    <button class="copy-button" data-clipboard-text="// TODO: Create a function called fetchUserData">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p>Now press Enter and let Copilot suggest the implementation!</p>
+
+                <h3>Cursor Chat Best Practices</h3>
+
+                <div class="info-box info-primary">
+                    <h4>How to Ask Questions in Cursor:</h4>
+                    <ul>
+                        <li><strong>"Explain this code"</strong> - Select code and ask for explanation</li>
+                        <li><strong>"Add error handling to this function"</strong> - Improves existing code</li>
+                        <li><strong>"Write tests for this component"</strong> - Generates test cases</li>
+                        <li><strong>"Refactor this to use async/await"</strong> - Modernizes code</li>
+                        <li><strong>"What's wrong with this code?"</strong> - Debugging help</li>
+                        <li><strong>"How do I deploy this to Vercel?"</strong> - Deployment guidance</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2><span class="step-number">5</span> Hands-On Project: AI-Assisted Todo App</h2>
+                
+                <p>Let's build a fully functional Todo app using AI assistance! This will show you the power of AI-driven development.</p>
+
+                <h3>Step 1: Set Up Project</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-bash"># Create project folder
+mkdir ai-todo-app
+cd ai-todo-app
+
+# Create files
+touch index.html style.css script.js
+
+# Open in VS Code or Cursor
+code .
+# or
+cursor .</code></pre>
+                    <button class="copy-button" data-clipboard-text="mkdir ai-todo-app&#10;cd ai-todo-app&#10;touch index.html style.css script.js&#10;code .">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3>Step 2: Use AI to Generate HTML</h3>
+
+                <p>Open <code>index.html</code> and write this comment:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;!-- Create a modern todo app with:
+- A title "My Todo App"
+- An input field for new todos with placeholder "What needs to be done?"
+- An "Add" button
+- An empty unordered list with id "todoList" for displaying todos
+- Link to style.css and script.js
+- Use semantic HTML5
+--&gt;
+</code></pre>
+                    <button class="copy-button" data-clipboard-text="&lt;!-- Create a modern todo app with:&#10;- A title 'My Todo App'&#10;- An input field for new todos&#10;--&gt;">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p>Let AI generate the HTML structure! Press <code>Tab</code> to accept suggestions.</p>
+
+                <h3>Step 3: Generate CSS with AI</h3>
+
+                <p>Open <code>style.css</code> and describe what you want:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-css">/* Todo App Styling
+- Modern, clean design
+- Center the app container
+- Use a nice color scheme (blues and grays)
+- Make input and button look good
+- Style todo items with hover effects
+- Add a checkbox and delete button for each todo
+- Make it responsive for mobile
+*/
+</code></pre>
+                    <button class="copy-button" data-clipboard-text="/* Todo App Styling&#10;- Modern, clean design&#10;- Center the app container&#10;*/">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p>Let AI create beautiful CSS for you!</p>
+
+                <h3>Step 4: Build JavaScript Logic with AI</h3>
+
+                <p>Open <code>script.js</code> and write detailed comments:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-javascript">// Todo App JavaScript
+// Requirements:
+// 1. Add new todos when user clicks Add button or presses Enter
+// 2. Display todos in the list
+// 3. Each todo should have:
+//    - A checkbox to mark as complete (adds line-through)
+//    - A delete button (removes from list)
+// 4. Save todos to localStorage so they persist on page reload
+// 5. Load todos from localStorage when page loads
+// 6. Clear input field after adding todo
+
+// Array to store todos
+let todos = [];
+
+// Function to load todos from localStorage
+
+
+// Function to save todos to localStorage
+
+
+// Function to add a new todo
+
+
+// Function to toggle todo completion
+
+
+// Function to delete a todo
+
+
+// Function to render all todos
+
+
+// Initialize app when page loads
+</code></pre>
+                    <button class="copy-button" data-clipboard-text="// Todo App JavaScript&#10;// Requirements:&#10;// 1. Add new todos when user clicks Add button">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p>Now position your cursor after each comment and let AI complete each function!</p>
+
+                <h3>Step 5: Test and Iterate</h3>
+
+                <ol class="numbered-list">
+                    <li>Open <code>index.html</code> in your browser</li>
+                    <li>Test adding todos</li>
+                    <li>Test marking todos as complete</li>
+                    <li>Test deleting todos</li>
+                    <li>Refresh the page - todos should persist!</li>
+                </ol>
+
+                <div class="info-box info-warning">
+                    <h4>💡 AI Made a Mistake?</h4>
+                    <p>If the code doesn't work perfectly:</p>
+                    <ol>
+                        <li>Read the console for error messages</li>
+                        <li>Ask AI: "This code gives error X. How do I fix it?"</li>
+                        <li>Use Cursor's inline chat (<code>Cmd/Ctrl + I</code>) to edit problematic sections</li>
+                        <li>Don't be afraid to regenerate suggestions</li>
+                    </ol>
+                </div>
+
+                <h3>Step 6: Enhance with AI</h3>
+
+                <p>Now let's add features! Ask AI to help you add:</p>
+
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" id="enhance1" class="task-checkbox">
+                        <label for="enhance1">Add a "Clear All" button</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="enhance2" class="task-checkbox">
+                        <label for="enhance2">Add a counter showing remaining todos</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="enhance3" class="task-checkbox">
+                        <label for="enhance3">Add filter buttons (All, Active, Completed)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="enhance4" class="task-checkbox">
+                        <label for="enhance4">Add edit functionality for existing todos</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="enhance5" class="task-checkbox">
+                        <label for="enhance5">Add animations when adding/removing todos</label>
+                    </li>
+                </ul>
+
+                <p>Simply add comments describing each feature and let AI implement them!</p>
+
+                <div class="success-box">
+                    <h4><i class="fas fa-trophy"></i> Congratulations!</h4>
+                    <p>You just built a fully functional web app using AI assistance! Notice how much faster you worked and how AI handled the boilerplate code, letting you focus on the logic and requirements.</p>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2>Best Practices for AI-Assisted Coding</h2>
+                
+                <div class="info-box info-primary">
+                    <h3>✅ DO:</h3>
+                    <ul>
+                        <li>Write clear, detailed comments describing what you need</li>
+                        <li>Review and understand all AI-generated code</li>
+                        <li>Test thoroughly before deploying</li>
+                        <li>Use AI to learn new concepts and patterns</li>
+                        <li>Ask AI to explain code you don't understand</li>
+                        <li>Iterate on suggestions - ask for improvements</li>
+                        <li>Use AI for boilerplate and repetitive code</li>
+                    </ul>
+                </div>
+
+                <div class="info-box info-warning">
+                    <h3>❌ DON'T:</h3>
+                    <ul>
+                        <li>Blindly copy-paste without understanding</li>
+                        <li>Trust AI 100% - it makes mistakes</li>
+                        <li>Skip learning fundamentals</li>
+                        <li>Use AI-generated code for security-critical functions without review</li>
+                        <li>Assume AI suggestions are the best solution</li>
+                        <li>Forget to test edge cases</li>
+                        <li>Rely on AI for production code without human oversight</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lesson-section">
+                <h2>Self-Check Questions</h2>
+                
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <p><strong>1. What is the main benefit of using AI coding assistants?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q1" value="a">
+                                They write perfect code every time
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="b">
+                                They help you code faster and focus on problem-solving
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="c">
+                                They replace the need to learn programming
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2. GitHub Copilot is free for:</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q2" value="a">
+                                Everyone
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="b">
+                                Students and verified educators
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="c">
+                                Only open source developers
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3. What makes a good AI prompt?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q3" value="a">
+                                Short and vague
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="b">
+                                Detailed with context, expectations, and requirements
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="c">
+                                Just keywords
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>4. Should you always trust and use AI-generated code without reviewing it?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q4" value="a">
+                                Yes, AI is always correct
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="b">
+                                No, always review and understand the code first
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="c">
+                                Only review it on Fridays
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>5. What's the difference between GitHub Copilot and Cursor?</strong></p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q5" value="a">
+                                They're exactly the same
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="b">
+                                Copilot is an extension; Cursor is an AI-first editor
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="c">
+                                Cursor only works on mobile devices
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary check-answers-btn" onclick="checkAnswers()">Check Answers</button>
+                    <div class="quiz-results" style="display: none;"></div>
+                </div>
+            </section>
+
+            <section class="next-steps">
+                <h2>🎉 Week -4 Complete!</h2>
+                
+                <div class="success-box">
+                    <h3>What You've Accomplished This Week:</h3>
+                    <ul>
+                        <li>✅ Set up your development environment (VS Code)</li>
+                        <li>✅ Mastered the command line</li>
+                        <li>✅ Learned Git and GitHub</li>
+                        <li>✅ Installed Node.js and npm</li>
+                        <li>✅ Set up AI coding assistants</li>
+                    </ul>
+                    <p><strong>You're now equipped with all the tools professional developers use!</strong> 🚀</p>
+                </div>
+
+                <h3>What's Next?</h3>
+                <p>Starting next week (Week -3), you'll dive into <strong>HTML & CSS</strong> to build beautiful, responsive web pages. You'll learn:</p>
+                <ul>
+                    <li>HTML structure and semantic elements</li>
+                    <li>CSS styling, layouts, and animations</li>
+                    <li>Responsive design for all devices</li>
+                    <li>Modern CSS techniques (Flexbox, Grid)</li>
+                    <li>Building real projects from scratch</li>
+                </ul>
+
+                <div class="info-box info-primary">
+                    <h4>💡 Before Starting Week -3:</h4>
+                    <p>Take a moment to celebrate your progress! You've built a solid foundation. The journey ahead gets more exciting as you start building visual, interactive projects!</p>
+                </div>
+
+                <div class="button-group">
+                    <a href="day4.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Previous: Node.js & npm
+                    </a>
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Back to Week -4 Overview
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="lesson-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 AI Full-Stack Developer Bootcamp. Built with 💙 for aspiring developers.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script>
+        // Initialize clipboard for copy buttons
+        new ClipboardJS('.copy-button');
+
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Quiz checking function
+        function checkAnswers() {
+            const answers = {
+                q1: 'b',
+                q2: 'b',
+                q3: 'b',
+                q4: 'b',
+                q5: 'b'
+            };
+
+            let score = 0;
+            let total = Object.keys(answers).length;
+
+            for (let question in answers) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            const resultsDiv = document.querySelector('.quiz-results');
+            resultsDiv.style.display = 'block';
+            
+            const percentage = (score / total) * 100;
+            let message = '';
+            let className = '';
+
+            if (percentage === 100) {
+                message = `🎉 Perfect! ${score}/${total} correct! You've mastered AI coding assistants!`;
+                className = 'success-box';
+            } else if (percentage >= 60) {
+                message = `✅ Good job! ${score}/${total} correct. Review the questions you missed.`;
+                className = 'info-box info-primary';
+            } else {
+                message = `📚 ${score}/${total} correct. Review the lesson and try again!`;
+                className = 'info-box info-warning';
+            }
+
+            resultsDiv.innerHTML = `<div class="${className}"><p>${message}</p></div>`;
+        }
+    </script>
+</body>
+</html>
