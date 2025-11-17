@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week -3, Day 1: HTML Basics & Document Structure | AI Full-Stack Bootcamp</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/lesson.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <nav class="lesson-nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <div class="lesson-info">
+                <span class="week-badge">Week -3</span>
+                <span class="day-badge">Day 1</span>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="lesson-layout">
+        <aside class="lesson-sidebar">
+            <div class="progress-overview">
+                <h3>Your Progress</h3>
+                <div class="progress-circle">
+                    <svg viewBox="0 0 36 36" class="circular-progress">
+                        <path class="circle-bg"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path class="circle"
+                            stroke-dasharray="20, 100"
+                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                    </svg>
+                    <div class="progress-text">20%</div>
+                </div>
+            </div>
+            
+            <nav class="day-navigation">
+                <h4>Week -3 Days</h4>
+                <a href="day1.html" class="day-link active">
+                    <span class="day-number">1</span>
+                    <span class="day-title">HTML Basics</span>
+                </a>
+                <a href="day2.html" class="day-link">
+                    <span class="day-number">2</span>
+                    <span class="day-title">CSS Fundamentals</span>
+                </a>
+                <a href="day3.html" class="day-link">
+                    <span class="day-number">3</span>
+                    <span class="day-title">Flexbox & Grid</span>
+                </a>
+                <a href="day4.html" class="day-link">
+                    <span class="day-number">4</span>
+                    <span class="day-title">Responsive Design</span>
+                </a>
+                <a href="day5.html" class="day-link">
+                    <span class="day-number">5</span>
+                    <span class="day-title">Portfolio Project</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="lesson-content">
+            <header class="lesson-header">
+                <h1>Day 1: HTML Basics & Document Structure</h1>
+                <div class="lesson-meta">
+                    <span><i class="fas fa-clock"></i> 3 hours</span>
+                    <span><i class="fas fa-tasks"></i> 6 objectives</span>
+                    <span><i class="fas fa-code"></i> Beginner</span>
+                </div>
+            </header>
+
+            <div class="info-box info-primary">
+                <h3><i class="fas fa-lightbulb"></i> Why This Matters</h3>
+                <p>HTML (HyperText Markup Language) is the foundation of every website on the internet. It's the skeleton that gives structure to web pages. Before you can build beautiful, interactive web applications, you need to understand how to structure content with HTML. Think of HTML as the blueprint of a house—without it, you can't add the paint (CSS) or the electrical systems (JavaScript).</p>
+                <p style="margin-top: 1rem;"><strong>Real-world impact:</strong> Every web developer, regardless of specialization, uses HTML daily. Even modern frameworks like React ultimately generate HTML. Mastering HTML fundamentals is essential for your journey as a full-stack developer.</p>
+            </div>
+
+            <section class="objectives">
+                <h3><i class="fas fa-bullseye"></i> Learning Objectives</h3>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" id="obj1" data-lesson="week-3-day-1">
+                        <label for="obj1">Understand what HTML is and how it structures web content</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj2" data-lesson="week-3-day-1">
+                        <label for="obj2">Create a properly structured HTML document with the correct DOCTYPE and document structure</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj3" data-lesson="week-3-day-1">
+                        <label for="obj3">Use essential HTML elements including headings, paragraphs, lists, links, and images</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj4" data-lesson="week-3-day-1">
+                        <label for="obj4">Understand and apply semantic HTML for better accessibility and SEO</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj5" data-lesson="week-3-day-1">
+                        <label for="obj5">Build a complete HTML page from scratch with proper structure and content</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="obj6" data-lesson="week-3-day-1">
+                        <label for="obj6">Validate HTML code and troubleshoot common errors</label>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-book-open"></i> What is HTML?</h2>
+                <p>HTML stands for <strong>HyperText Markup Language</strong>. Let's break that down:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li><strong>HyperText:</strong> Text that contains links to other texts (the "hyper" means "beyond" or "above")</li>
+                    <li><strong>Markup:</strong> A system of annotating text to indicate how it should be displayed</li>
+                    <li><strong>Language:</strong> A set of rules and syntax that browsers understand</li>
+                </ul>
+
+                <div class="info-box info-success" style="margin-top: 1.5rem;">
+                    <h4><i class="fas fa-graduation-cap"></i> Simple Analogy</h4>
+                    <p>Think of HTML like the structure of a newspaper article:</p>
+                    <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                        <li>The headline is like an <code>&lt;h1&gt;</code> tag</li>
+                        <li>Paragraphs are like <code>&lt;p&gt;</code> tags</li>
+                        <li>Lists of bullet points are like <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags</li>
+                        <li>Images are like <code>&lt;img&gt;</code> tags</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section style="margin-top: 3rem;">
+                <h2><i class="fas fa-file-code"></i> The Basic HTML Document Structure</h2>
+                <p>Every HTML document follows a standard structure. Here's the fundamental skeleton that every webpage needs:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <button class="copy-button" data-clipboard-text="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+    <meta charset=&quot;UTF-8&quot;>
+    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+    <title>My First Web Page</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is my first HTML page.</p>
+</body>
+</html>">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3 style="margin-top: 2rem;"><i class="fas fa-info-circle"></i> Understanding Each Part</h3>
+                
+                <div style="margin-top: 1.5rem;">
+                    <h4><strong>1. <code>&lt;!DOCTYPE html&gt;</code></strong></h4>
+                    <p>This declaration tells the browser that this document is an HTML5 document. It must be the very first line of your HTML file. Think of it as saying "Hey browser, I'm speaking HTML5!"</p>
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                    <h4><strong>2. <code>&lt;html lang="en"&gt;</code></strong></h4>
+                    <p>The root element that wraps all content on the page. The <code>lang="en"</code> attribute specifies the language (English) for accessibility tools and search engines.</p>
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                    <h4><strong>3. <code>&lt;head&gt;</code></strong></h4>
+                    <p>Contains metadata about the document—information that's not displayed on the page but is important for browsers and search engines:</p>
+                    <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                        <li><code>&lt;meta charset="UTF-8"&gt;</code> - Character encoding for the document</li>
+                        <li><code>&lt;meta name="viewport"...&gt;</code> - Makes your page responsive on mobile devices</li>
+                        <li><code>&lt;title&gt;</code> - The text that appears in the browser tab</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                    <h4><strong>4. <code>&lt;body&gt;</code></strong></h4>
+                    <p>Contains all the visible content of your webpage—everything users actually see and interact with.</p>
+                </div>
+            </section>
+
+            <section style="margin-top: 3rem;">
+                <h2><i class="fas fa-tasks"></i> Hands-On: Create Your First HTML Page</h2>
+                
+                <div class="info-box info-warning">
+                    <h4><i class="fas fa-tools"></i> Before You Start</h4>
+                    <p>Make sure you have:</p>
+                    <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                        <li>VS Code installed and open</li>
+                        <li>A folder called <code>bootcamp-projects</code> on your computer</li>
+                        <li>Your terminal/command line ready</li>
+                    </ul>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Step 1: Create Your Project Folder</h3>
+                
+                <div class="code-block">
+                    <pre><code class="language-bash">cd bootcamp-projects
+mkdir html-basics
+cd html-basics
+code .</code></pre>
+                    <button class="copy-button" data-clipboard-text="cd bootcamp-projects
+mkdir html-basics
+cd html-basics
+code .">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <p style="margin-top: 1rem;">This will create a new folder and open it in VS Code.</p>
+
+                <h3 style="margin-top: 2rem;">Step 2: Create Your HTML File</h3>
+                <ol style="margin-left: 2rem; margin-top: 1rem;" class="numbered-list">
+                    <li>
+                        <strong>Create a new file</strong>
+                        <p>In VS Code: <strong>File → New File</strong></p>
+                    </li>
+                    <li>
+                        <strong>Save it as index.html</strong>
+                        <p>Use <strong>File → Save As</strong> and name it <code>index.html</code></p>
+                    </li>
+                    <li>
+                        <strong>Use Emmet shortcut</strong>
+                        <p>Type <code>!</code> and press <strong>Tab</strong> - this generates the HTML boilerplate instantly!</p>
+                    </li>
+                </ol>
+
+                <div class="info-box info-success" style="margin-top: 1.5rem;">
+                    <h4><i class="fas fa-magic"></i> VS Code Tip: Emmet</h4>
+                    <p>Emmet is a built-in VS Code tool that helps you write HTML faster. When you type <code>!</code> and press Tab, it automatically generates the complete HTML structure. This is a huge time-saver!</p>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Step 3: Add Content</h3>
+                <p>Replace the content inside the <code>&lt;body&gt;</code> tags with:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML page. I'm learning web development!&lt;/p&gt;
+    
+    &lt;h2&gt;About Me&lt;/h2&gt;
+    &lt;p&gt;I'm a student at the AI Full-Stack Developer Bootcamp.&lt;/p&gt;
+    
+    &lt;h2&gt;My Goals&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Learn HTML, CSS, and JavaScript&lt;/li&gt;
+        &lt;li&gt;Build real-world projects&lt;/li&gt;
+        &lt;li&gt;Get hired as a developer&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;</code></pre>
+                    <button class="copy-button" data-clipboard-text="<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is my first HTML page. I'm learning web development!</p>
+    
+    <h2>About Me</h2>
+    <p>I'm a student at the AI Full-Stack Developer Bootcamp.</p>
+    
+    <h2>My Goals</h2>
+    <ul>
+        <li>Learn HTML, CSS, and JavaScript</li>
+        <li>Build real-world projects</li>
+        <li>Get hired as a developer</li>
+    </ul>
+</body>">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Step 4: Open in Browser</h3>
+                
+                <div class="task-tabs">
+                    <button class="tab-button active" data-tab="option1">
+                        <i class="fas fa-mouse-pointer"></i> Option 1: Double-Click
+                    </button>
+                    <button class="tab-button" data-tab="option2">
+                        <i class="fas fa-rocket"></i> Option 2: Live Server
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="option1">
+                    <p>Navigate to your <code>html-basics</code> folder and double-click <code>index.html</code>. It will open in your default browser.</p>
+                    <p style="margin-top: 1rem;"><strong>Pros:</strong> Quick and simple</p>
+                    <p><strong>Cons:</strong> You need to manually refresh after each change</p>
+                </div>
+
+                <div class="tab-content" id="option2">
+                    <p>In VS Code, right-click on <code>index.html</code> and select <strong>"Open with Live Server"</strong>.</p>
+                    <p style="margin-top: 1rem;"><strong>Pros:</strong> Auto-refreshes when you save changes!</p>
+                    <p><strong>Cons:</strong> Requires Live Server extension (but you installed it in Week -4!)</p>
+                </div>
+
+                <div class="success-box" style="margin-top: 2rem;">
+                    <h4><i class="fas fa-trophy"></i> Success!</h4>
+                    <p>If you see your webpage with a heading and paragraphs, congratulations! You've just created your first HTML page. 🎉</p>
+                </div>
+            </section>
+
+            <section style="margin-top: 3rem;">
+                <h2><i class="fas fa-tags"></i> Essential HTML Elements</h2>
+                <p>Let's explore the most commonly used HTML elements you'll need to know:</p>
+
+                <h3 style="margin-top: 2rem;">Headings</h3>
+                <p>HTML has six levels of headings, from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code> (least important):</p>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;h1&gt;Main Heading - Use Only Once Per Page&lt;/h1&gt;
+&lt;h2&gt;Section Heading&lt;/h2&gt;
+&lt;h3&gt;Subsection Heading&lt;/h3&gt;
+&lt;h4&gt;Smaller Heading&lt;/h4&gt;
+&lt;h5&gt;Even Smaller&lt;/h5&gt;
+&lt;h6&gt;Smallest Heading&lt;/h6&gt;</code></pre>
+                    <button class="copy-button" data-clipboard-text="<h1>Main Heading - Use Only Once Per Page</h1>
+<h2>Section Heading</h2>
+<h3>Subsection Heading</h3>
+<h4>Smaller Heading</h4>
+<h5>Even Smaller</h5>
+<h6>Smallest Heading</h6>">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="info-box info-warning" style="margin-top: 1rem;">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Best Practice</h4>
+                    <p>Use only one <code>&lt;h1&gt;</code> per page (typically your page title). Don't skip heading levels (don't go from h1 to h3). Think of headings like an outline or table of contents.</p>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Paragraphs</h3>
+                <p>The <code>&lt;p&gt;</code> element represents a paragraph of text:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;p&gt;This is a paragraph. It can contain as much text as you want.&lt;/p&gt;
+
+&lt;p&gt;This is another paragraph. Browsers automatically add space 
+   between paragraphs.&lt;/p&gt;</code></pre>
+                    <button class="copy-button" data-clipboard-text="<p>This is a paragraph. It can contain as much text as you want.</p>
+
+<p>This is another paragraph. Browsers automatically add space 
+   between paragraphs.</p>">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Lists</h3>
+                <p>There are two main types of lists in HTML:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;!-- Unordered List (Bullet Points) --&gt;
+&lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered List (Numbered) --&gt;
+&lt;ol&gt;
+    &lt;li&gt;First step&lt;/li&gt;
+    &lt;li&gt;Second step&lt;/li&gt;
+    &lt;li&gt;Third step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    <button class="copy-button" data-clipboard-text="<!-- Unordered List (Bullet Points) -->
+<ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ul>
+
+<!-- Ordered List (Numbered) -->
+<ol>
+    <li>First step</li>
+    <li>Second step</li>
+    <li>Third step</li>
+</ol>">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Links</h3>
+                <p>The <code>&lt;a&gt;</code> (anchor) element creates hyperlinks:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;!-- External Link --&gt;
+&lt;a href="https://www.google.com"&gt;Visit Google&lt;/a&gt;
+
+&lt;!-- Link that opens in new tab --&gt;
+&lt;a href="https://www.github.com" target="_blank"&gt;Visit GitHub&lt;/a&gt;
+
+&lt;!-- Link to another page in your site --&gt;
+&lt;a href="about.html"&gt;About Page&lt;/a&gt;
+
+&lt;!-- Email link --&gt;
+&lt;a href="mailto:hello@example.com"&gt;Email Me&lt;/a&gt;</code></pre>
+                    <button class="copy-button" data-clipboard-text="<!-- External Link -->
+<a href=&quot;https://www.google.com&quot;>Visit Google</a>
+
+<!-- Link that opens in new tab -->
+<a href=&quot;https://www.github.com&quot; target=&quot;_blank&quot;>Visit GitHub</a>
+
+<!-- Link to another page in your site -->
+<a href=&quot;about.html&quot;>About Page</a>
+
+<!-- Email link -->
+<a href=&quot;mailto:hello@example.com&quot;>Email Me</a>">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Images</h3>
+                <p>The <code>&lt;img&gt;</code> element displays images:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;!-- Image with alt text for accessibility --&gt;
+&lt;img src="photo.jpg" alt="A beautiful sunset"&gt;
+
+&lt;!-- Image with width and height --&gt;
+&lt;img src="logo.png" alt="Company Logo" width="200" height="100"&gt;
+
+&lt;!-- Image from URL --&gt;
+&lt;img src="https://via.placeholder.com/300" alt="Placeholder image"&gt;</code></pre>
+                    <button class="copy-button" data-clipboard-text="<!-- Image with alt text for accessibility -->
+<img src=&quot;photo.jpg&quot; alt=&quot;A beautiful sunset&quot;>
+
+<!-- Image with width and height -->
+<img src=&quot;logo.png&quot; alt=&quot;Company Logo&quot; width=&quot;200&quot; height=&quot;100&quot;>
+
+<!-- Image from URL -->
+<img src=&quot;https://via.placeholder.com/300&quot; alt=&quot;Placeholder image&quot;>">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="info-box info-primary" style="margin-top: 1rem;">
+                    <h4><i class="fas fa-universal-access"></i> Accessibility Matters</h4>
+                    <p>Always include the <code>alt</code> attribute on images. This text describes the image for screen readers (used by visually impaired users) and displays if the image fails to load.</p>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Text Formatting</h3>
+                <p>Common elements for formatting text:</p>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;p&gt;This is &lt;strong&gt;bold text&lt;/strong&gt; (important).&lt;/p&gt;
+&lt;p&gt;This is &lt;em&gt;italic text&lt;/em&gt; (emphasized).&lt;/p&gt;
+&lt;p&gt;This is &lt;mark&gt;highlighted text&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;del&gt;deleted text&lt;/del&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;ins&gt;inserted text&lt;/ins&gt;.&lt;/p&gt;
+&lt;p&gt;This is &lt;small&gt;smaller text&lt;/small&gt;.&lt;/p&gt;</code></pre>
+                    <button class="copy-button" data-clipboard-text="<p>This is <strong>bold text</strong> (important).</p>
+<p>This is <em>italic text</em> (emphasized).</p>
+<p>This is <mark>highlighted text</mark>.</p>
+<p>This is <del>deleted text</del>.</p>
+<p>This is <ins>inserted text</ins>.</p>
+<p>This is <small>smaller text</small>.</p>">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section style="margin-top: 3rem;">
+                <h2><i class="fas fa-sitemap"></i> Semantic HTML</h2>
+                <p>Semantic HTML uses elements that clearly describe their meaning to both the browser and the developer. Instead of using generic <code>&lt;div&gt;</code> elements for everything, we use semantic elements that describe the content's purpose.</p>
+
+                <h3 style="margin-top: 1.5rem;">Why Semantic HTML Matters:</h3>
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li><strong>SEO:</strong> Search engines better understand your content</li>
+                    <li><strong>Accessibility:</strong> Screen readers can navigate your page more effectively</li>
+                    <li><strong>Maintainability:</strong> Code is easier to read and understand</li>
+                    <li><strong>Consistency:</strong> Standard elements everyone recognizes</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem;">Common Semantic Elements</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Semantic HTML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;My Website&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Article Title&lt;/h2&gt;
+            &lt;p&gt;Article content goes here...&lt;/p&gt;
+        &lt;/article&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Section Title&lt;/h2&gt;
+            &lt;p&gt;Section content...&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;aside&gt;
+            &lt;h3&gt;Related Links&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2025 My Website. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <button class="copy-button" data-clipboard-text="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+    <meta charset=&quot;UTF-8&quot;>
+    <title>Semantic HTML Example</title>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href=&quot;#home&quot;>Home</a></li>
+                <li><a href=&quot;#about&quot;>About</a></li>
+                <li><a href=&quot;#contact&quot;>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Article Title</h2>
+            <p>Article content goes here...</p>
+        </article>
+
+        <section>
+            <h2>Section Title</h2>
+            <p>Section content...</p>
+        </section>
+
+        <aside>
+            <h3>Related Links</h3>
+            <ul>
+                <li><a href=&quot;#&quot;>Link 1</a></li>
+                <li><a href=&quot;#&quot;>Link 2</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Element Definitions:</h3>
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li><code>&lt;header&gt;</code> - Top section with site branding and navigation</li>
+                    <li><code>&lt;nav&gt;</code> - Navigation links</li>
+                    <li><code>&lt;main&gt;</code> - Main content area (use only once per page)</li>
+                    <li><code>&lt;article&gt;</code> - Self-contained content (blog post, news article)</li>
+                    <li><code>&lt;section&gt;</code> - Thematic grouping of content</li>
+                    <li><code>&lt;aside&gt;</code> - Content tangentially related to main content (sidebars)</li>
+                    <li><code>&lt;footer&gt;</code> - Bottom section with copyright, links, contact info</li>
+                </ul>
+            </section>
+
+            <section style="margin-top: 3rem;">
+                <h2><i class="fas fa-exclamation-circle"></i> Common HTML Errors and How to Fix Them</h2>
+
+                <div style="margin-top: 1.5rem;">
+                    <h3><strong>Error 1: Forgetting to Close Tags</strong></h3>
+                    
+                    <p style="margin: 1rem 0;"><span style="color: #ef4444;">❌ Wrong:</span></p>
+                    <div class="code-block">
+                        <pre><code class="language-html">&lt;p&gt;This is a paragraph
+&lt;p&gt;This is another paragraph</code></pre>
+                    </div>
+                    
+                    <p style="margin: 1rem 0;"><span style="color: #10b981;">✅ Correct:</span></p>
+                    <div class="code-block">
+                        <pre><code class="language-html">&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;p&gt;This is another paragraph&lt;/p&gt;</code></pre>
+                        <button class="copy-button" data-clipboard-text="<p>This is a paragraph</p>
+<p>This is another paragraph</p>">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <p style="margin-top: 1rem;"><strong>How to prevent:</strong> VS Code automatically closes tags for you. Pay attention to the color coding—unclosed tags often appear in a different color.</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3><strong>Error 2: Nesting Tags Incorrectly</strong></h3>
+                    
+                    <p style="margin: 1rem 0;"><span style="color: #ef4444;">❌ Wrong:</span></p>
+                    <div class="code-block">
+                        <pre><code class="language-html">&lt;p&gt;This is &lt;strong&gt;bold text&lt;/p&gt;&lt;/strong&gt;</code></pre>
+                    </div>
+                    
+                    <p style="margin: 1rem 0;"><span style="color: #10b981;">✅ Correct:</span></p>
+                    <div class="code-block">
+                        <pre><code class="language-html">&lt;p&gt;This is &lt;strong&gt;bold text&lt;/strong&gt;&lt;/p&gt;</code></pre>
+                        <button class="copy-button" data-clipboard-text="<p>This is <strong>bold text</strong></p>">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <p style="margin-top: 1rem;"><strong>Rule:</strong> The last tag opened must be the first tag closed. Think of it like parentheses in math.</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3><strong>Error 3: Missing Quotes on Attributes</strong></h3>
+                    
+                    <p style="margin: 1rem 0;"><span style="color: #ef4444;">❌ Wrong:</span></p>
+                    <div class="code-block">
+                        <pre><code class="language-html">&lt;img src=photo.jpg alt=My Photo&gt;</code></pre>
+                    </div>
+                    
+                    <p style="margin: 1rem 0;"><span style="color: #10b981;">✅ Correct:</span></p>
+                    <div class="code-block">
+                        <pre><code class="language-html">&lt;img src="photo.jpg" alt="My Photo"&gt;</code></pre>
+                        <button class="copy-button" data-clipboard-text="<img src=&quot;photo.jpg&quot; alt=&quot;My Photo&quot;>">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <p style="margin-top: 1rem;"><strong>Best practice:</strong> Always use double quotes around attribute values.</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3><strong>Error 4: Multiple &lt;h1&gt; Tags</strong></h3>
+                    
+                    <p style="margin: 1rem 0;"><span style="color: #f59e0b;">⚠️ Not Recommended:</span></p>
+                    <div class="code-block">
+                        <pre><code class="language-html">&lt;h1&gt;Welcome&lt;/h1&gt;
+&lt;h1&gt;About Us&lt;/h1&gt;
+&lt;h1&gt;Contact&lt;/h1&gt;</code></pre>
+                    </div>
+                    
+                    <p style="margin: 1rem 0;"><span style="color: #10b981;">✅ Better:</span></p>
+                    <div class="code-block">
+                        <pre><code class="language-html">&lt;h1&gt;Welcome to Our Site&lt;/h1&gt;
+&lt;h2&gt;About Us&lt;/h2&gt;
+&lt;h2&gt;Contact&lt;/h2&gt;</code></pre>
+                        <button class="copy-button" data-clipboard-text="<h1>Welcome to Our Site</h1>
+<h2>About Us</h2>
+<h2>Contact</h2>">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <p style="margin-top: 1rem;"><strong>Why:</strong> Search engines and screen readers expect one main heading per page.</p>
+                </div>
+            </section>
+
+            <section style="margin-top: 3rem;">
+                <h2><i class="fas fa-project-diagram"></i> Practice Exercise: Build a Complete Page</h2>
+                
+                <div class="info-box info-primary">
+                    <h4><i class="fas fa-clipboard-list"></i> Your Task</h4>
+                    <p>Create a complete "About Me" webpage using all the elements you've learned. Your page should include:</p>
+                    <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                        <li>Proper HTML document structure</li>
+                        <li>Semantic HTML elements (header, main, footer)</li>
+                        <li>At least 3 different heading levels</li>
+                        <li>Multiple paragraphs</li>
+                        <li>An unordered list and an ordered list</li>
+                        <li>At least 2 links (one external, one email)</li>
+                        <li>At least 1 image with proper alt text</li>
+                        <li>Some formatted text (bold, italic, etc.)</li>
+                    </ul>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Step-by-Step Guide:</h3>
+                
+                <ol style="margin-left: 2rem; margin-top: 1rem;" class="numbered-list">
+                    <li>
+                        <strong>Create a new file</strong>
+                        <p>Name it <code>about-me.html</code></p>
+                    </li>
+                    <li>
+                        <strong>Add the HTML structure</strong>
+                        <p>Use the <code>!</code> + Tab shortcut</p>
+                    </li>
+                    <li>
+                        <strong>Update the title</strong>
+                        <p>Change it to "About [Your Name]"</p>
+                    </li>
+                    <li>
+                        <strong>Add semantic structure</strong>
+                        <p>Create header, main, and footer sections</p>
+                    </li>
+                    <li>
+                        <strong>Fill in content</strong>
+                        <p>Write about yourself, your interests, goals, etc.</p>
+                    </li>
+                    <li>
+                        <strong>Add visual elements</strong>
+                        <p>Include an image (use a placeholder if needed)</p>
+                    </li>
+                    <li>
+                        <strong>Test your page</strong>
+                        <p>Open it in a browser and check that everything looks good</p>
+                    </li>
+                    <li>
+                        <strong>Validate</strong>
+                        <p>Use the W3C Validator (see below)</p>
+                    </li>
+                </ol>
+
+                <div class="info-box info-success" style="margin-top: 1.5rem;">
+                    <h4><i class="fas fa-check-double"></i> Validation Tool</h4>
+                    <p>Visit <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a> to check your HTML for errors. You can paste your code or upload your file. Aim for zero errors and warnings!</p>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Example Solution Structure:</h3>
+
+                <div class="code-block">
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;About John Doe&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;About Me&lt;/h1&gt;
+        &lt;p&gt;Welcome to my personal page!&lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Who I Am&lt;/h2&gt;
+            &lt;img src="https://via.placeholder.com/200" alt="Profile photo"&gt;
+            &lt;p&gt;Hi! I'm &lt;strong&gt;John Doe&lt;/strong&gt;, a student learning full-stack development.&lt;/p&gt;
+            &lt;p&gt;I'm passionate about technology and building things that solve real problems.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;My Interests&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Web Development&lt;/li&gt;
+                &lt;li&gt;Artificial Intelligence&lt;/li&gt;
+                &lt;li&gt;Playing guitar&lt;/li&gt;
+                &lt;li&gt;Hiking and photography&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;My Learning Journey&lt;/h2&gt;
+            &lt;ol&gt;
+                &lt;li&gt;Started with HTML basics&lt;/li&gt;
+                &lt;li&gt;Learning CSS for styling&lt;/li&gt;
+                &lt;li&gt;Next up: JavaScript!&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Connect With Me&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="mailto:john@example.com"&gt;Email me&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="https://github.com/johndoe" target="_blank"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&lt;small&gt;&copy; 2025 John Doe. Built with HTML.&lt;/small&gt;&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <button class="copy-button" data-clipboard-text="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+    <meta charset=&quot;UTF-8&quot;>
+    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+    <title>About John Doe</title>
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+        <p>Welcome to my personal page!</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Who I Am</h2>
+            <img src=&quot;https://via.placeholder.com/200&quot; alt=&quot;Profile photo&quot;>
+            <p>Hi! I'm <strong>John Doe</strong>, a student learning full-stack development.</p>
+            <p>I'm passionate about technology and building things that solve real problems.</p>
+        </section>
+
+        <section>
+            <h2>My Interests</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Artificial Intelligence</li>
+                <li>Playing guitar</li>
+                <li>Hiking and photography</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>My Learning Journey</h2>
+            <ol>
+                <li>Started with HTML basics</li>
+                <li>Learning CSS for styling</li>
+                <li>Next up: JavaScript!</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Connect With Me</h2>
+            <ul>
+                <li><a href=&quot;mailto:john@example.com&quot;>Email me</a></li>
+                <li><a href=&quot;https://github.com/johndoe&quot; target=&quot;_blank&quot;>GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>&copy; 2025 John Doe. Built with HTML.</small></p>
+    </footer>
+</body>
+</html>">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </section>
+
+            <div class="quiz-section">
+                <h3><i class="fas fa-question-circle"></i> Self-Check Quiz</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Test your understanding of HTML basics. Try to answer without looking back!</p>
+
+                <div class="quiz-question">
+                    <h4>1. What does HTML stand for?</h4>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="a">
+                            <span>Hyper Text Markup Link</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="b">
+                            <span>HyperText Markup Language</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="c">
+                            <span>High Tech Modern Language</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="d">
+                            <span>Home Tool Markup Language</span>
+                        </label>
+                    </div>
+                    <div class="quiz-feedback" style="display: none;">
+                        <p><strong>Answer: b) HyperText Markup Language</strong></p>
+                        <p>HTML is the standard markup language for creating web pages. "HyperText" refers to links that connect web pages, and "Markup" describes the way tags are used to define elements.</p>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>2. Which of the following is the correct HTML document structure?</h4>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="a">
+                            <span>&lt;head&gt;&lt;body&gt;&lt;html&gt;</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="b">
+                            <span>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="c">
+                            <span>&lt;body&gt;&lt;head&gt;&lt;html&gt;</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="d">
+                            <span>&lt;html&gt;&lt;body&gt;&lt;head&gt;</span>
+                        </label>
+                    </div>
+                    <div class="quiz-feedback" style="display: none;">
+                        <p><strong>Answer: b) &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</strong></p>
+                        <p>The correct structure has the &lt;html&gt; element wrapping everything, with &lt;head&gt; (metadata) coming before &lt;body&gt; (visible content).</p>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>3. What is the purpose of the &lt;head&gt; element?</h4>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="a">
+                            <span>To display the main content of the page</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="b">
+                            <span>To contain metadata and links to stylesheets</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="c">
+                            <span>To create the page footer</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="d">
+                            <span>To add images to the page</span>
+                        </label>
+                    </div>
+                    <div class="quiz-feedback" style="display: none;">
+                        <p><strong>Answer: b) To contain metadata and links to stylesheets</strong></p>
+                        <p>The &lt;head&gt; section contains information about the document that isn't displayed on the page, like the title, character encoding, and links to CSS files.</p>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>4. Why is semantic HTML important?</h4>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q4" value="a">
+                            <span>It makes pages load faster</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q4" value="b">
+                            <span>It improves accessibility, SEO, and code readability</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q4" value="c">
+                            <span>It's required by all browsers</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q4" value="d">
+                            <span>It makes styling easier</span>
+                        </label>
+                    </div>
+                    <div class="quiz-feedback" style="display: none;">
+                        <p><strong>Answer: b) It improves accessibility, SEO, and code readability</strong></p>
+                        <p>Semantic HTML uses elements that clearly describe their meaning. This helps search engines understand your content, makes your site more accessible to users with disabilities, and makes your code easier for developers to understand.</p>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>5. What's the difference between &lt;strong&gt; and &lt;b&gt; tags?</h4>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q5" value="a">
+                            <span>There is no difference</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q5" value="b">
+                            <span>&lt;strong&gt; indicates importance (semantic), &lt;b&gt; is just visual</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q5" value="c">
+                            <span>&lt;b&gt; is newer and preferred</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q5" value="d">
+                            <span>&lt;strong&gt; only works in modern browsers</span>
+                        </label>
+                    </div>
+                    <div class="quiz-feedback" style="display: none;">
+                        <p><strong>Answer: b) &lt;strong&gt; indicates importance (semantic), &lt;b&gt; is just visual</strong></p>
+                        <p>While both make text bold, &lt;strong&gt; is semantic and indicates that the text is important, which screen readers will emphasize. The &lt;b&gt; tag is purely presentational and doesn't convey any special meaning.</p>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="checkQuiz()" style="margin-top: 2rem;">
+                    <i class="fas fa-check-circle"></i> Check Answers
+                </button>
+            </div>
+
+            <div class="resources-section">
+                <h3><i class="fas fa-book"></i> Additional Resources</h3>
+                <ul class="resources-list">
+                    <li>
+                        <i class="fas fa-link"></i>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs: HTML</a>
+                        <span>Comprehensive HTML reference</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-link"></i>
+                        <a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a>
+                        <span>Interactive examples and exercises</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-link"></i>
+                        <a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a>
+                        <span>Check your HTML for errors</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-link"></i>
+                        <a href="https://html.com/" target="_blank">HTML.com</a>
+                        <span>HTML tutorials and guides</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-link"></i>
+                        <a href="https://www.htmlreference.io/" target="_blank">HTML Reference</a>
+                        <span>Visual guide to all HTML elements</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-video"></i>
+                        <a href="https://www.youtube.com/watch?v=pQN-pnXPaVg" target="_blank">HTML Crash Course</a>
+                        <span>Video tutorial (1 hour)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="success-box" style="margin-top: 3rem;">
+                <h4><i class="fas fa-trophy"></i> What You've Accomplished Today</h4>
+                <p>Congratulations! You've completed Day 1 of HTML fundamentals. You now know:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem; text-align: left;">
+                    <li>✅ What HTML is and why it's the foundation of the web</li>
+                    <li>✅ How to structure a complete HTML document</li>
+                    <li>✅ Essential HTML elements (headings, paragraphs, lists, links, images)</li>
+                    <li>✅ The importance of semantic HTML for accessibility and SEO</li>
+                    <li>✅ How to avoid common HTML mistakes</li>
+                    <li>✅ How to validate your HTML code</li>
+                </ul>
+                <p style="margin-top: 1.5rem;"><strong>Tomorrow:</strong> We'll dive into CSS to make your HTML pages beautiful!</p>
+            </div>
+
+            <nav class="lesson-nav-buttons">
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Week -3
+                </a>
+                <a href="day2.html" class="btn btn-primary">
+                    Day 2: CSS Fundamentals <i class="fas fa-arrow-right"></i>
+                </a>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../../js/lesson.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script>
+        // Quiz checking function
+        function checkQuiz() {
+            const answers = {
+                q1: 'b',
+                q2: 'b',
+                q3: 'b',
+                q4: 'b',
+                q5: 'b'
+            };
+            
+            let score = 0;
+            const questions = document.querySelectorAll('.quiz-question');
+            
+            questions.forEach((question, index) => {
+                const selectedOption = question.querySelector('input[type="radio"]:checked');
+                const feedback = question.querySelector('.quiz-feedback');
+                const options = question.querySelectorAll('.quiz-option');
+                const questionNum = `q${index + 1}`;
+                
+                // Show feedback
+                feedback.style.display = 'block';
+                
+                // Check answer and apply styling
+                options.forEach(option => {
+                    const input = option.querySelector('input');
+                    if (input.value === answers[questionNum]) {
+                        option.style.borderLeft = '4px solid var(--accent-success)';
+                        option.style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
+                    }
+                    if (selectedOption && input === selectedOption) {
+                        if (input.value === answers[questionNum]) {
+                            score++;
+                        } else {
+                            option.style.borderLeft = '4px solid #ef4444';
+                            option.style.backgroundColor = 'rgba(239, 68, 68, 0.1)';
+                        }
+                    }
+                });
+            });
+            
+            // Show score
+            const scoreMessage = `You scored ${score} out of ${Object.keys(answers).length}!`;
+            const scoreBox = document.createElement('div');
+            scoreBox.className = 'success-box';
+            scoreBox.style.marginTop = '2rem';
+            scoreBox.innerHTML = `<h4><i class="fas fa-star"></i> ${scoreMessage}</h4>
+                <p>${score === 5 ? 'Perfect score! You\'ve mastered HTML basics!' : 
+                   score >= 3 ? 'Good job! Review the questions you missed.' : 
+                   'Keep studying! Review the lesson and try again.'}</p>`;
+            
+            const quizSection = document.querySelector('.quiz-section');
+            const existingScore = quizSection.querySelector('.success-box');
+            if (existingScore) {
+                existingScore.remove();
+            }
+            quizSection.appendChild(scoreBox);
+            
+            // Disable the check button
+            event.target.disabled = true;
+            event.target.textContent = 'Quiz Completed';
+        }
+    </script>
+</body>
+</html>
