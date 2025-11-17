@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
-<body>
+
+<body data-lesson-id="week-4-day4">
     <nav class="lesson-nav">
         <div class="nav-container">
             <a href="../../index.html" class="back-link">
@@ -31,17 +33,12 @@
                 <h3>Your Progress</h3>
                 <div class="progress-circle">
                     <svg viewBox="0 0 36 36" class="circular-progress">
-                        <path class="circle-bg"
-                            d="M18 2.0845
+                        <path class="circle-bg" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
-                            a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                        <path class="circle"
-                            stroke-dasharray="0, 100"
-                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="0, 100" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
-                            a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
                     </svg>
                     <div class="progress-text">0%</div>
                 </div>
@@ -80,13 +77,36 @@
                     <span><i class="fas fa-check-circle"></i> 6 tasks</span>
                     <span><i class="fas fa-code"></i> CLI project</span>
                 </div>
+                <section class="content-section video-section">
+                    <h2><i class="fas fa-video"></i> Live Class Recording</h2>
+                    <div class="video-container">
+                        <div class="video-placeholder" id="videoPlaceholder">
+                            <div class="placeholder-content">
+                                <i class="fas fa-clock"></i>
+                                <h3>Recording Coming Soon</h3>
+                                <p>Available within 24 hours after session.</p>
+                            </div>
+                        </div>
+                        <div class="video-embed youtube-embed" id="youtubeEmbed" style="display: none;">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </header>
 
             <section class="info-box info-primary">
                 <h3><i class="fas fa-lightbulb"></i> Why This Matters</h3>
-                <p><strong>Node.js</strong> allows JavaScript to run outside the browser—on servers, in build tools, and more. It's essential for modern web development because it lets you use JavaScript for EVERYTHING (frontend and backend).</p>
-                <p><strong>npm (Node Package Manager)</strong> gives you access to over 2 million code libraries. Instead of building everything from scratch, you can use packages created by millions of developers worldwide. It's like having an app store for code!</p>
-                <p><strong>Fun fact:</strong> npm is the largest software registry in the world. Companies like Netflix, LinkedIn, and NASA use npm packages in production! 🚀</p>
+                <p><strong>Node.js</strong> allows JavaScript to run outside the browser—on servers, in build tools, and
+                    more. It's essential for modern web development because it lets you use JavaScript for EVERYTHING
+                    (frontend and backend).</p>
+                <p><strong>npm (Node Package Manager)</strong> gives you access to over 2 million code libraries.
+                    Instead of building everything from scratch, you can use packages created by millions of developers
+                    worldwide. It's like having an app store for code!</p>
+                <p><strong>Fun fact:</strong> npm is the largest software registry in the world. Companies like Netflix,
+                    LinkedIn, and NASA use npm packages in production! 🚀</p>
             </section>
 
             <section class="objectives">
@@ -122,7 +142,7 @@
 
             <section class="lesson-section">
                 <h2><span class="step-number">1</span> Install Node.js</h2>
-                
+
                 <p>Node.js includes npm automatically, so installing Node.js gives you both!</p>
 
                 <div class="task-tabs">
@@ -189,13 +209,14 @@
 
                 <div class="tab-content" id="linux-node">
                     <h3>Install Node.js on Linux</h3>
-                    
+
                     <h4>Ubuntu/Debian (Recommended Method):</h4>
                     <div class="code-block">
                         <pre><code class="language-bash"># Install Node.js LTS via NodeSource
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs</code></pre>
-                        <button class="copy-button" data-clipboard-text="curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -&#10;sudo apt-get install -y nodejs">
+                        <button class="copy-button"
+                            data-clipboard-text="curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -&#10;sudo apt-get install -y nodejs">
                             <i class="fas fa-copy"></i>
                         </button>
                     </div>
@@ -240,7 +261,7 @@ npm --version</code></pre>
 
             <section class="lesson-section">
                 <h2><span class="step-number">2</span> Your First Node.js Program</h2>
-                
+
                 <p>Let's run JavaScript outside the browser for the first time!</p>
 
                 <h3>Method 1: Node REPL (Read-Eval-Print Loop)</h3>
@@ -314,7 +335,8 @@ console.log(greet("Developer"));
 const add = (a, b) => a + b;
 const result = add(10, 5);
 console.log(`10 + 5 = ${result}`);</code></pre>
-                    <button class="copy-button" data-clipboard-text='console.log("Hello from Node.js!");&#10;&#10;const greet = (name) => {&#10;  return `Hello, ${name}! Welcome to Node.js!`;&#10;};&#10;&#10;console.log(greet("Developer"));'>
+                    <button class="copy-button"
+                        data-clipboard-text='console.log("Hello from Node.js!");&#10;&#10;const greet = (name) => {&#10;  return `Hello, ${name}! Welcome to Node.js!`;&#10;};&#10;&#10;console.log(greet("Developer"));'>
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -337,14 +359,16 @@ Hello, Developer! Welcome to Node.js!
 
                 <div class="success-box">
                     <h4><i class="fas fa-trophy"></i> Congratulations!</h4>
-                    <p>You just ran JavaScript on your computer (not in a browser)! This is HUGE - you can now build servers, CLI tools, automation scripts, and more!</p>
+                    <p>You just ran JavaScript on your computer (not in a browser)! This is HUGE - you can now build
+                        servers, CLI tools, automation scripts, and more!</p>
                 </div>
             </section>
 
             <section class="lesson-section">
                 <h2><span class="step-number">3</span> Initialize Your First npm Project</h2>
-                
-                <p>npm projects use a <code>package.json</code> file to track information about your project and its dependencies.</p>
+
+                <p>npm projects use a <code>package.json</code> file to track information about your project and its
+                    dependencies.</p>
 
                 <h3>Create a Project Folder</h3>
 
@@ -373,7 +397,8 @@ npm init</code></pre>
                     </button>
                 </div>
 
-                <p>The <code>-y</code> flag says "yes" to all defaults. This creates a <code>package.json</code> file!</p>
+                <p>The <code>-y</code> flag says "yes" to all defaults. This creates a <code>package.json</code> file!
+                </p>
 
                 <h3>Understanding package.json</h3>
 
@@ -402,7 +427,8 @@ npm init</code></pre>
                         <li><strong>description:</strong> What your project does</li>
                         <li><strong>main:</strong> Entry point file</li>
                         <li><strong>scripts:</strong> Commands you can run with <code>npm run</code></li>
-                        <li><strong>dependencies:</strong> Packages your project needs (added when you install packages)</li>
+                        <li><strong>dependencies:</strong> Packages your project needs (added when you install packages)
+                        </li>
                         <li><strong>author:</strong> Your name</li>
                         <li><strong>license:</strong> How others can use your code</li>
                     </ul>
@@ -411,7 +437,7 @@ npm init</code></pre>
 
             <section class="lesson-section">
                 <h2><span class="step-number">4</span> Installing npm Packages</h2>
-                
+
                 <p>Let's install a popular package called <code>chalk</code> that adds colors to terminal output!</p>
 
                 <h3>Install Your First Package</h3>
@@ -472,7 +498,8 @@ console.log(chalk.cyan.bgBlack(' Black background with cyan text '));
 
 // You can also use hex colors
 console.log(chalk.hex('#FF69B4')('Hot pink text!'));</code></pre>
-                    <button class="copy-button" data-clipboard-text="const chalk = require('chalk');&#10;&#10;console.log(chalk.blue('Hello in blue!'));&#10;console.log(chalk.red.bold('Error message in red and bold!'));&#10;console.log(chalk.green.underline('Success!'));"> 
+                    <button class="copy-button"
+                        data-clipboard-text="const chalk = require('chalk');&#10;&#10;console.log(chalk.blue('Hello in blue!'));&#10;console.log(chalk.red.bold('Error message in red and bold!'));&#10;console.log(chalk.green.underline('Success!'));">
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -490,13 +517,14 @@ console.log(chalk.hex('#FF69B4')('Hot pink text!'));</code></pre>
 
                 <div class="success-box">
                     <h4><i class="fas fa-trophy"></i> You Just Used Your First npm Package!</h4>
-                    <p>This is exactly how professional developers work - using packages to avoid reinventing the wheel!</p>
+                    <p>This is exactly how professional developers work - using packages to avoid reinventing the wheel!
+                    </p>
                 </div>
             </section>
 
             <section class="lesson-section">
                 <h2><span class="step-number">5</span> Create .gitignore</h2>
-                
+
                 <p>Before pushing to GitHub, we need to tell Git to ignore <code>node_modules</code>.</p>
 
                 <div class="code-block">
@@ -536,7 +564,8 @@ npm-debug.log*
 # Build output
 dist/
 build/</code></pre>
-                    <button class="copy-button" data-clipboard-text="node_modules/&#10;.env&#10;.DS_Store&#10;Thumbs.db&#10;.vscode/&#10;*.log">
+                    <button class="copy-button"
+                        data-clipboard-text="node_modules/&#10;.env&#10;.DS_Store&#10;Thumbs.db&#10;.vscode/&#10;*.log">
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -545,7 +574,8 @@ build/</code></pre>
 
                 <div class="info-box info-success">
                     <h4>Why This Matters:</h4>
-                    <p>If you <code>git add .</code> without .gitignore, you'd commit thousands of node_modules files to GitHub. That would:</p>
+                    <p>If you <code>git add .</code> without .gitignore, you'd commit thousands of node_modules files to
+                        GitHub. That would:</p>
                     <ul>
                         <li>Make your repository HUGE (hundreds of MB)</li>
                         <li>Slow down cloning and pushing</li>
@@ -557,7 +587,7 @@ build/</code></pre>
 
             <section class="lesson-section">
                 <h2><span class="step-number">6</span> npm Scripts</h2>
-                
+
                 <p>npm scripts let you create shortcuts for commands you run often.</p>
 
                 <h3>Edit package.json</h3>
@@ -582,7 +612,8 @@ build/</code></pre>
     "chalk": "^4.1.2"
   }
 }</code></pre>
-                    <button class="copy-button" data-clipboard-text='"scripts": {&#10;  "start": "node index.js",&#10;  "test": "echo \\"Running tests...\\"",&#10;  "dev": "node index.js"&#10;}'>
+                    <button class="copy-button"
+                        data-clipboard-text='"scripts": {&#10;  "start": "node index.js",&#10;  "test": "echo \\"Running tests...\\"",&#10;  "dev": "node index.js"&#10;}'>
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -616,7 +647,7 @@ npm run hello</code></pre>
 
             <section class="lesson-section">
                 <h2><span class="step-number">7</span> Project: Daily Motivation CLI</h2>
-                
+
                 <p>Let's build a fun CLI tool that displays motivational quotes with colors!</p>
 
                 <h3>Step 1: Create Project Structure</h3>
@@ -641,7 +672,8 @@ touch index.js .gitignore README.md
 
 # Open in VS Code
 code .</code></pre>
-                    <button class="copy-button" data-clipboard-text="cd Desktop&#10;mkdir motivation-cli&#10;cd motivation-cli&#10;npm init -y&#10;npm install chalk@4&#10;touch index.js .gitignore README.md&#10;code .">
+                    <button class="copy-button"
+                        data-clipboard-text="cd Desktop&#10;mkdir motivation-cli&#10;cd motivation-cli&#10;npm init -y&#10;npm install chalk@4&#10;touch index.js .gitignore README.md&#10;code .">
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -705,7 +737,8 @@ console.log('');
 console.log(chalk.cyan.bold('━'.repeat(60)));
 console.log(chalk.magenta('  Keep coding! You got this! 💪'));
 console.log(chalk.cyan.bold('━'.repeat(60) + '\n'));</code></pre>
-                    <button class="copy-button" data-clipboard-text="const chalk = require('chalk');&#10;const quotes = ['Your code doesn\\'t have to be perfect!'];&#10;const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];&#10;console.log(chalk.green('✨ Daily Motivation'));">
+                    <button class="copy-button"
+                        data-clipboard-text="const chalk = require('chalk');&#10;const quotes = ['Your code doesn\\'t have to be perfect!'];&#10;const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];&#10;console.log(chalk.green('✨ Daily Motivation'));">
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -720,7 +753,8 @@ console.log(chalk.cyan.bold('━'.repeat(60) + '\n'));</code></pre>
   "motivate": "node index.js",
   "inspire": "node index.js"
 }</code></pre>
-                    <button class="copy-button" data-clipboard-text='"scripts": {&#10;  "start": "node index.js",&#10;  "motivate": "node index.js"&#10;}'>
+                    <button class="copy-button"
+                        data-clipboard-text='"scripts": {&#10;  "start": "node index.js",&#10;  "motivate": "node index.js"&#10;}'>
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -741,7 +775,8 @@ node index.js</code></pre>
                     </button>
                 </div>
 
-                <p>You should see beautiful colored motivational output! Run it multiple times to see different quotes! 🎉</p>
+                <p>You should see beautiful colored motivational output! Run it multiple times to see different quotes!
+                    🎉</p>
 
                 <h3>Step 6: Push to GitHub</h3>
 
@@ -760,20 +795,22 @@ git commit -m "Add daily motivation CLI with chalk"
 git remote add origin https://github.com/YOUR-USERNAME/motivation-cli.git
 git branch -M main
 git push -u origin main</code></pre>
-                    <button class="copy-button" data-clipboard-text='git init&#10;git add .&#10;git commit -m "Add daily motivation CLI"&#10;git remote add origin https://github.com/YOUR-USERNAME/motivation-cli.git&#10;git branch -M main&#10;git push -u origin main'>
+                    <button class="copy-button"
+                        data-clipboard-text='git init&#10;git add .&#10;git commit -m "Add daily motivation CLI"&#10;git remote add origin https://github.com/YOUR-USERNAME/motivation-cli.git&#10;git branch -M main&#10;git push -u origin main'>
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
 
                 <div class="success-box">
                     <h4><i class="fas fa-trophy"></i> You Built a Real CLI Application!</h4>
-                    <p>This is a complete npm project with dependencies, proper .gitignore, and it's on GitHub. This is exactly how professional projects work! 🚀</p>
+                    <p>This is a complete npm project with dependencies, proper .gitignore, and it's on GitHub. This is
+                        exactly how professional projects work! 🚀</p>
                 </div>
             </section>
 
             <section class="lesson-section">
                 <h2>Essential npm Commands Reference</h2>
-                
+
                 <table style="width: 100%; margin: var(--spacing-lg) 0;">
                     <thead>
                         <tr>
@@ -828,7 +865,7 @@ git push -u origin main</code></pre>
 
             <section class="lesson-section">
                 <h2>Self-Check Questions</h2>
-                
+
                 <div class="quiz-container">
                     <div class="quiz-question">
                         <p><strong>1. What is Node.js?</strong></p>
@@ -927,11 +964,13 @@ git push -u origin main</code></pre>
 
             <section class="next-steps">
                 <h2>What's Next?</h2>
-                <p>Tomorrow is the final day of Week -4! You'll learn about GitHub Copilot and AI coding assistants - tools that will supercharge your development workflow and help you code faster and smarter! 🤖</p>
-                
+                <p>Tomorrow is the final day of Week -4! You'll learn about GitHub Copilot and AI coding assistants -
+                    tools that will supercharge your development workflow and help you code faster and smarter! 🤖</p>
+
                 <div class="info-box info-success">
                     <h4>🎉 You're Almost Done with Week -4!</h4>
-                    <p>You've learned SO much: VS Code, command line, Git, GitHub, Node.js, and npm. You're building real developer skills! One more day and you'll be ready for Week -3!</p>
+                    <p>You've learned SO much: VS Code, command line, Git, GitHub, Node.js, and npm. You're building
+                        real developer skills! One more day and you'll be ready for Week -3!</p>
                 </div>
 
                 <div class="nav-buttons">
@@ -960,20 +999,20 @@ git push -u origin main</code></pre>
                 q4: 'b', // No, use .gitignore
                 q5: 'b'  // npm install
             };
-            
+
             let correct = 0;
             let total = Object.keys(answers).length;
-            
+
             for (let q in answers) {
                 const selected = document.querySelector(`input[name="${q}"]:checked`);
                 if (selected && selected.value === answers[q]) {
                     correct++;
                 }
             }
-            
+
             const resultsDiv = document.querySelector('.quiz-results');
             resultsDiv.style.display = 'block';
-            
+
             if (correct === total) {
                 resultsDiv.className = 'quiz-results correct';
                 resultsDiv.innerHTML = `<i class="fas fa-trophy"></i> Perfect! ${correct}/${total} correct! You've mastered Node.js & npm! 🎉`;
@@ -988,11 +1027,11 @@ git push -u origin main</code></pre>
 
         // Tab switching
         document.querySelectorAll('.tab-button').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const targetTab = this.dataset.tab;
                 this.parentElement.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
-                
+
                 let sibling = this.parentElement.nextElementSibling;
                 while (sibling && sibling.classList.contains('tab-content')) {
                     sibling.classList.remove('active');
@@ -1004,7 +1043,7 @@ git push -u origin main</code></pre>
 
         // Copy buttons
         document.querySelectorAll('.copy-button').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const text = this.dataset.clipboardText || this.previousElementSibling.textContent;
                 navigator.clipboard.writeText(text).then(() => {
                     this.classList.add('copied');
@@ -1013,5 +1052,7 @@ git push -u origin main</code></pre>
             });
         });
     </script>
+    <script src="../../js/video-config.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
-<body>
+
+<body data-lesson-id="week-4-day1">
     <nav class="lesson-nav">
         <div class="nav-container">
             <a href="../../index.html" class="back-link">
@@ -32,17 +34,12 @@
                 <h3>Your Progress</h3>
                 <div class="progress-circle">
                     <svg viewBox="0 0 36 36" class="circular-progress">
-                        <path class="circle-bg"
-                            d="M18 2.0845
+                        <path class="circle-bg" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
-                            a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                        <path class="circle"
-                            stroke-dasharray="0, 100"
-                            d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="0, 100" d="M18 2.0845
                             a 15.9155 15.9155 0 0 1 0 31.831
-                            a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
+                            a 15.9155 15.9155 0 0 1 0 -31.831" />
                     </svg>
                     <div class="progress-text">0%</div>
                 </div>
@@ -82,12 +79,32 @@
                     <span><i class="fas fa-check-circle"></i> 4 tasks</span>
                     <span><i class="fas fa-code"></i> 1 project</span>
                 </div>
+                <section class="content-section video-section">
+                    <h2><i class="fas fa-video"></i> Live Class Recording</h2>
+                    <div class="video-container">
+                        <div class="video-placeholder" id="videoPlaceholder">
+                            <div class="placeholder-content">
+                                <i class="fas fa-clock"></i>
+                                <h3>Recording Coming Soon</h3>
+                                <p>Available within 24 hours after session.</p>
+                            </div>
+                        </div>
+                        <div class="video-embed youtube-embed" id="youtubeEmbed" style="display: none;">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </header>
 
             <!-- Why This Matters Section -->
             <section class="info-box info-primary">
                 <h3><i class="fas fa-lightbulb"></i> Why This Matters</h3>
-                <p>Professional developers use specialized tools that make coding faster and more efficient. Visual Studio Code (VS Code) is the most popular code editor in the world, used by over 14 million developers. Today, you'll set up your development workspace.</p>
+                <p>Professional developers use specialized tools that make coding faster and more efficient. Visual
+                    Studio Code (VS Code) is the most popular code editor in the world, used by over 14 million
+                    developers. Today, you'll set up your development workspace.</p>
             </section>
 
             <!-- Learning Objectives -->
@@ -117,7 +134,7 @@
             <!-- Task 1: Install VS Code -->
             <section class="lesson-section">
                 <h2><span class="step-number">1</span> Install Visual Studio Code</h2>
-                
+
                 <div class="task-tabs">
                     <button class="tab-button active" data-tab="windows">
                         <i class="fab fa-windows"></i> Windows
@@ -135,7 +152,8 @@
                     <ol class="numbered-list">
                         <li>
                             <strong>Download VS Code</strong>
-                            <p>Go to <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a></p>
+                            <p>Go to <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a>
+                            </p>
                             <p>Click "Download for Windows"</p>
                         </li>
                         <li>
@@ -167,7 +185,8 @@
                     <ol class="numbered-list">
                         <li>
                             <strong>Download VS Code</strong>
-                            <p>Go to <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a></p>
+                            <p>Go to <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a>
+                            </p>
                             <p>Click "Download for Mac"</p>
                         </li>
                         <li>
@@ -201,7 +220,8 @@
                             <div class="code-block">
                                 <pre><code class="language-bash">sudo apt update
 sudo apt install code</code></pre>
-                                <button class="copy-button" data-clipboard-text="sudo apt update&#10;sudo apt install code">
+                                <button class="copy-button"
+                                    data-clipboard-text="sudo apt update&#10;sudo apt install code">
                                     <i class="fas fa-copy"></i>
                                 </button>
                             </div>
@@ -211,7 +231,8 @@ sudo apt install code</code></pre>
                             <div class="code-block">
                                 <pre><code class="language-bash">sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo dnf install code</code></pre>
-                                <button class="copy-button" data-clipboard-text="sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc&#10;sudo dnf install code">
+                                <button class="copy-button"
+                                    data-clipboard-text="sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc&#10;sudo dnf install code">
                                     <i class="fas fa-copy"></i>
                                 </button>
                             </div>
@@ -230,20 +251,22 @@ sudo dnf install code</code></pre>
 
                 <div class="verification-box">
                     <h4><i class="fas fa-check-circle"></i> Verify Installation</h4>
-                    <p>VS Code should now be open on your computer. You should see a Welcome screen with options to customize your editor.</p>
+                    <p>VS Code should now be open on your computer. You should see a Welcome screen with options to
+                        customize your editor.</p>
                 </div>
             </section>
 
             <!-- Task 2: Install Extensions -->
             <section class="lesson-section">
                 <h2><span class="step-number">2</span> Install Essential Extensions</h2>
-                
+
                 <p>Extensions add superpowers to VS Code. Let's install 5 must-have extensions for web development.</p>
 
                 <div class="info-box info-success">
                     <p><strong>How to install extensions:</strong></p>
                     <ol>
-                        <li>Click the Extensions icon in the left sidebar (or press <code>Ctrl/Cmd + Shift + X</code>)</li>
+                        <li>Click the Extensions icon in the left sidebar (or press <code>Ctrl/Cmd + Shift + X</code>)
+                        </li>
                         <li>Search for the extension name</li>
                         <li>Click "Install"</li>
                     </ol>
@@ -256,7 +279,8 @@ sudo dnf install code</code></pre>
                             <h3>Live Server</h3>
                         </div>
                         <p class="extension-author">by Ritwick Dey</p>
-                        <p>Opens HTML files in your browser with auto-reload when you save changes. Essential for web development!</p>
+                        <p>Opens HTML files in your browser with auto-reload when you save changes. Essential for web
+                            development!</p>
                         <div class="extension-search">
                             <strong>Search:</strong> "Live Server Ritwick Dey"
                         </div>
@@ -315,7 +339,7 @@ sudo dnf install code</code></pre>
             <!-- Task 3: Configure Settings -->
             <section class="lesson-section">
                 <h2><span class="step-number">3</span> Configure VS Code Settings</h2>
-                
+
                 <p>Let's customize VS Code for the best coding experience.</p>
 
                 <ol class="numbered-list">
@@ -331,7 +355,7 @@ sudo dnf install code</code></pre>
                     <li>
                         <strong>Paste These Settings</strong>
                         <div class="code-block">
-<pre><code class="language-json">{
+                            <pre><code class="language-json">{
   "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
@@ -341,7 +365,8 @@ sudo dnf install code</code></pre>
   "workbench.colorTheme": "Default Dark+",
   "editor.fontFamily": "Consolas, 'Courier New', monospace"
 }</code></pre>
-                            <button class="copy-button" data-clipboard-text='{"editor.fontSize": 14,"editor.tabSize": 2,"editor.wordWrap": "on","editor.formatOnSave": true,"files.autoSave": "afterDelay","editor.minimap.enabled": false}'>
+                            <button class="copy-button"
+                                data-clipboard-text='{"editor.fontSize": 14,"editor.tabSize": 2,"editor.wordWrap": "on","editor.formatOnSave": true,"files.autoSave": "afterDelay","editor.minimap.enabled": false}'>
                                 <i class="fas fa-copy"></i>
                             </button>
                         </div>
@@ -368,7 +393,7 @@ sudo dnf install code</code></pre>
             <!-- Task 4: Create Your First File -->
             <section class="lesson-section">
                 <h2><span class="step-number">4</span> Create Your First Webpage</h2>
-                
+
                 <p>Let's build your very first webpage! This is where your coding journey begins. 🚀</p>
 
                 <ol class="numbered-list">
@@ -379,7 +404,7 @@ sudo dnf install code</code></pre>
                     <li>
                         <strong>Copy This HTML Code</strong>
                         <div class="code-block">
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+                            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -444,7 +469,8 @@ sudo dnf install code</code></pre>
 
                 <div class="success-box">
                     <h4><i class="fas fa-trophy"></i> Congratulations!</h4>
-                    <p>You just created your first webpage! This is a huge milestone. You're now officially a developer in training! 🎉</p>
+                    <p>You just created your first webpage! This is a huge milestone. You're now officially a developer
+                        in training! 🎉</p>
                 </div>
             </section>
 
@@ -452,7 +478,7 @@ sudo dnf install code</code></pre>
             <section class="lesson-section">
                 <h2>Self-Check Questions</h2>
                 <p>Test your understanding of today's lesson:</p>
-                
+
                 <div class="quiz-container">
                     <div class="quiz-question">
                         <p><strong>1. What is Visual Studio Code?</strong></p>
@@ -473,7 +499,8 @@ sudo dnf install code</code></pre>
                     </div>
 
                     <div class="quiz-question">
-                        <p><strong>2. Which extension allows you to view HTML files in a browser with auto-reload?</strong></p>
+                        <p><strong>2. Which extension allows you to view HTML files in a browser with
+                                auto-reload?</strong></p>
                         <div class="quiz-options">
                             <label>
                                 <input type="radio" name="q2" value="a">
@@ -516,8 +543,9 @@ sudo dnf install code</code></pre>
             <!-- Next Steps -->
             <section class="next-steps">
                 <h2>What's Next?</h2>
-                <p>Tomorrow, you'll learn how to use the command line to navigate your computer like a pro. This is one of the most important skills for developers!</p>
-                
+                <p>Tomorrow, you'll learn how to use the command line to navigate your computer like a pro. This is one
+                    of the most important skills for developers!</p>
+
                 <div class="nav-buttons">
                     <a href="../../index.html" class="btn btn-secondary">
                         <i class="fas fa-home"></i> Back to Home
@@ -535,5 +563,7 @@ sudo dnf install code</code></pre>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
     <script src="../../js/main.js"></script>
     <script src="../../js/lesson.js"></script>
+    <script src="../../js/video-config.js"></script>
 </body>
+
 </html>

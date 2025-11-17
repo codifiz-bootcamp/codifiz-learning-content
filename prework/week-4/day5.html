@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
-<body>
+
+<body data-lesson-id="week-4-day5">
     <nav class="top-nav">
         <div class="nav-container">
             <a href="../../index.html" class="nav-brand">
@@ -71,13 +73,37 @@
                     <span><i class="fas fa-check-circle"></i> 5 tasks</span>
                     <span><i class="fas fa-robot"></i> AI-powered</span>
                 </div>
+                <section class="content-section video-section">
+                    <h2><i class="fas fa-video"></i> Live Class Recording</h2>
+                    <div class="video-container">
+                        <div class="video-placeholder" id="videoPlaceholder">
+                            <div class="placeholder-content">
+                                <i class="fas fa-clock"></i>
+                                <h3>Recording Coming Soon</h3>
+                                <p>Available within 24 hours after session.</p>
+                            </div>
+                        </div>
+                        <div class="video-embed youtube-embed" id="youtubeEmbed" style="display: none;">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </header>
 
             <section class="info-box info-primary">
                 <h3><i class="fas fa-lightbulb"></i> Why This Matters</h3>
-                <p><strong>AI coding assistants are revolutionizing how developers work.</strong> Tools like GitHub Copilot and Cursor AI act as your pair programming partner, suggesting code as you type, explaining complex concepts, and helping you code faster and smarter.</p>
-                <p><strong>The future of coding is collaborative—human + AI.</strong> Studies show developers using AI assistants are 55% more productive. They write code faster, make fewer errors, and spend less time stuck on syntax issues.</p>
-                <p><strong>This is not cheating—it's the new normal.</strong> Just like calculators didn't make math obsolete, AI assistants won't replace developers. They amplify your abilities, letting you focus on solving problems instead of memorizing syntax! 🚀</p>
+                <p><strong>AI coding assistants are revolutionizing how developers work.</strong> Tools like GitHub
+                    Copilot and Cursor AI act as your pair programming partner, suggesting code as you type, explaining
+                    complex concepts, and helping you code faster and smarter.</p>
+                <p><strong>The future of coding is collaborative—human + AI.</strong> Studies show developers using AI
+                    assistants are 55% more productive. They write code faster, make fewer errors, and spend less time
+                    stuck on syntax issues.</p>
+                <p><strong>This is not cheating—it's the new normal.</strong> Just like calculators didn't make math
+                    obsolete, AI assistants won't replace developers. They amplify your abilities, letting you focus on
+                    solving problems instead of memorizing syntax! 🚀</p>
             </section>
 
             <section class="objectives">
@@ -109,7 +135,7 @@
 
             <section class="lesson-section">
                 <h2><span class="step-number">1</span> What Are AI Coding Assistants?</h2>
-                
+
                 <p>AI coding assistants are tools powered by large language models (LLMs) that help you write code.</p>
 
                 <h3>How They Work</h3>
@@ -117,7 +143,8 @@
                 <div class="info-box info-primary">
                     <ol>
                         <li><strong>Context Awareness:</strong> They read your code, comments, and file names</li>
-                        <li><strong>Pattern Recognition:</strong> They've learned from billions of lines of public code</li>
+                        <li><strong>Pattern Recognition:</strong> They've learned from billions of lines of public code
+                        </li>
                         <li><strong>Smart Suggestions:</strong> They predict what you're trying to write next</li>
                         <li><strong>On-Demand Help:</strong> You can ask questions and get explanations</li>
                     </ol>
@@ -165,7 +192,8 @@
                 <div class="info-box info-warning">
                     <h4>⚠️ Important Notes:</h4>
                     <ul>
-                        <li><strong>AI assistants suggest, you decide.</strong> Always review and understand the code.</li>
+                        <li><strong>AI assistants suggest, you decide.</strong> Always review and understand the code.
+                        </li>
                         <li><strong>They make mistakes.</strong> AI-generated code isn't always perfect or secure.</li>
                         <li><strong>Learning still matters.</strong> Use AI to accelerate learning, not replace it.</li>
                         <li><strong>Don't blindly copy-paste.</strong> Understand what the code does first.</li>
@@ -175,7 +203,7 @@
 
             <section class="lesson-section">
                 <h2><span class="step-number">2</span> Setting Up GitHub Copilot</h2>
-                
+
                 <p>GitHub Copilot integrates directly into VS Code and suggests code as you type.</p>
 
                 <h3>Step 1: Get GitHub Copilot Access</h3>
@@ -194,7 +222,8 @@
                     <ol class="numbered-list">
                         <li>
                             <strong>Apply for GitHub Student Developer Pack</strong>
-                            <p>Go to <a href="https://education.github.com/pack" target="_blank">education.github.com/pack</a></p>
+                            <p>Go to <a href="https://education.github.com/pack"
+                                    target="_blank">education.github.com/pack</a></p>
                         </li>
                         <li>
                             <strong>Verify Your Student Status</strong>
@@ -220,7 +249,8 @@
                 <div class="tab-content" id="paid">
                     <h4>Paid Copilot Plan</h4>
                     <ol class="numbered-list">
-                        <li>Go to <a href="https://github.com/features/copilot" target="_blank">github.com/features/copilot</a></li>
+                        <li>Go to <a href="https://github.com/features/copilot"
+                                target="_blank">github.com/features/copilot</a></li>
                         <li>Click "Start my free trial" (30 days free)</li>
                         <li>After trial: $10/month for individuals</li>
                     </ol>
@@ -273,7 +303,8 @@
 
                 <div class="success-box">
                     <h4>🎉 It's Working!</h4>
-                    <p>If you see gray text suggestions, Copilot is active! If not, check that you're signed in and have Copilot access.</p>
+                    <p>If you see gray text suggestions, Copilot is active! If not, check that you're signed in and have
+                        Copilot access.</p>
                 </div>
 
                 <h3>Copilot Keyboard Shortcuts</h3>
@@ -323,8 +354,9 @@
 
             <section class="lesson-section">
                 <h2><span class="step-number">3</span> Installing Cursor AI</h2>
-                
-                <p>Cursor is an AI-first code editor built on VS Code. It's designed for AI-assisted development from the ground up.</p>
+
+                <p>Cursor is an AI-first code editor built on VS Code. It's designed for AI-assisted development from
+                    the ground up.</p>
 
                 <h3>Why Use Cursor?</h3>
 
@@ -410,14 +442,17 @@
 
                 <div class="info-box info-success">
                     <h4>💡 Pro Tip: Use Both!</h4>
-                    <p>Many developers use <strong>VS Code with Copilot</strong> for daily work and <strong>Cursor</strong> when they need deeper AI assistance. You don't have to choose one or the other!</p>
+                    <p>Many developers use <strong>VS Code with Copilot</strong> for daily work and
+                        <strong>Cursor</strong> when they need deeper AI assistance. You don't have to choose one or the
+                        other!</p>
                 </div>
             </section>
 
             <section class="lesson-section">
                 <h2><span class="step-number">4</span> Writing Effective AI Prompts</h2>
-                
-                <p>AI assistants are powerful, but the quality of their output depends on the quality of your input. Here's how to write great prompts:</p>
+
+                <p>AI assistants are powerful, but the quality of their output depends on the quality of your input.
+                    Here's how to write great prompts:</p>
 
                 <h3>The CLEAR Prompting Framework</h3>
 
@@ -527,8 +562,9 @@
 
             <section class="lesson-section">
                 <h2><span class="step-number">5</span> Hands-On Project: AI-Assisted Todo App</h2>
-                
-                <p>Let's build a fully functional Todo app using AI assistance! This will show you the power of AI-driven development.</p>
+
+                <p>Let's build a fully functional Todo app using AI assistance! This will show you the power of
+                    AI-driven development.</p>
 
                 <h3>Step 1: Set Up Project</h3>
 
@@ -544,7 +580,8 @@ touch index.html style.css script.js
 code .
 # or
 cursor .</code></pre>
-                    <button class="copy-button" data-clipboard-text="mkdir ai-todo-app&#10;cd ai-todo-app&#10;touch index.html style.css script.js&#10;code .">
+                    <button class="copy-button"
+                        data-clipboard-text="mkdir ai-todo-app&#10;cd ai-todo-app&#10;touch index.html style.css script.js&#10;code .">
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -563,7 +600,8 @@ cursor .</code></pre>
 - Use semantic HTML5
 --&gt;
 </code></pre>
-                    <button class="copy-button" data-clipboard-text="&lt;!-- Create a modern todo app with:&#10;- A title 'My Todo App'&#10;- An input field for new todos&#10;--&gt;">
+                    <button class="copy-button"
+                        data-clipboard-text="&lt;!-- Create a modern todo app with:&#10;- A title 'My Todo App'&#10;- An input field for new todos&#10;--&gt;">
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -585,7 +623,8 @@ cursor .</code></pre>
 - Make it responsive for mobile
 */
 </code></pre>
-                    <button class="copy-button" data-clipboard-text="/* Todo App Styling&#10;- Modern, clean design&#10;- Center the app container&#10;*/">
+                    <button class="copy-button"
+                        data-clipboard-text="/* Todo App Styling&#10;- Modern, clean design&#10;- Center the app container&#10;*/">
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -631,7 +670,8 @@ let todos = [];
 
 // Initialize app when page loads
 </code></pre>
-                    <button class="copy-button" data-clipboard-text="// Todo App JavaScript&#10;// Requirements:&#10;// 1. Add new todos when user clicks Add button">
+                    <button class="copy-button"
+                        data-clipboard-text="// Todo App JavaScript&#10;// Requirements:&#10;// 1. Add new todos when user clicks Add button">
                         <i class="fas fa-copy"></i>
                     </button>
                 </div>
@@ -690,13 +730,14 @@ let todos = [];
 
                 <div class="success-box">
                     <h4><i class="fas fa-trophy"></i> Congratulations!</h4>
-                    <p>You just built a fully functional web app using AI assistance! Notice how much faster you worked and how AI handled the boilerplate code, letting you focus on the logic and requirements.</p>
+                    <p>You just built a fully functional web app using AI assistance! Notice how much faster you worked
+                        and how AI handled the boilerplate code, letting you focus on the logic and requirements.</p>
                 </div>
             </section>
 
             <section class="lesson-section">
                 <h2>Best Practices for AI-Assisted Coding</h2>
-                
+
                 <div class="info-box info-primary">
                     <h3>✅ DO:</h3>
                     <ul>
@@ -726,7 +767,7 @@ let todos = [];
 
             <section class="lesson-section">
                 <h2>Self-Check Questions</h2>
-                
+
                 <div class="quiz-container">
                     <div class="quiz-question">
                         <p><strong>1. What is the main benefit of using AI coding assistants?</strong></p>
@@ -783,7 +824,8 @@ let todos = [];
                     </div>
 
                     <div class="quiz-question">
-                        <p><strong>4. Should you always trust and use AI-generated code without reviewing it?</strong></p>
+                        <p><strong>4. Should you always trust and use AI-generated code without reviewing it?</strong>
+                        </p>
                         <div class="quiz-options">
                             <label>
                                 <input type="radio" name="q4" value="a">
@@ -825,7 +867,7 @@ let todos = [];
 
             <section class="next-steps">
                 <h2>🎉 Week -4 Complete!</h2>
-                
+
                 <div class="success-box">
                     <h3>What You've Accomplished This Week:</h3>
                     <ul>
@@ -839,7 +881,8 @@ let todos = [];
                 </div>
 
                 <h3>What's Next?</h3>
-                <p>Starting next week (Week -3), you'll dive into <strong>HTML & CSS</strong> to build beautiful, responsive web pages. You'll learn:</p>
+                <p>Starting next week (Week -3), you'll dive into <strong>HTML & CSS</strong> to build beautiful,
+                    responsive web pages. You'll learn:</p>
                 <ul>
                     <li>HTML structure and semantic elements</li>
                     <li>CSS styling, layouts, and animations</li>
@@ -850,7 +893,8 @@ let todos = [];
 
                 <div class="info-box info-primary">
                     <h4>💡 Before Starting Week -3:</h4>
-                    <p>Take a moment to celebrate your progress! You've built a solid foundation. The journey ahead gets more exciting as you start building visual, interactive projects!</p>
+                    <p>Take a moment to celebrate your progress! You've built a solid foundation. The journey ahead gets
+                        more exciting as you start building visual, interactive projects!</p>
                 </div>
 
                 <div class="button-group">
@@ -890,11 +934,11 @@ let todos = [];
         tabButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const tabId = button.getAttribute('data-tab');
-                
+
                 // Remove active class from all buttons and contents
                 tabButtons.forEach(btn => btn.classList.remove('active'));
                 tabContents.forEach(content => content.classList.remove('active'));
-                
+
                 // Add active class to clicked button and corresponding content
                 button.classList.add('active');
                 document.getElementById(tabId).classList.add('active');
@@ -923,7 +967,7 @@ let todos = [];
 
             const resultsDiv = document.querySelector('.quiz-results');
             resultsDiv.style.display = 'block';
-            
+
             const percentage = (score / total) * 100;
             let message = '';
             let className = '';
@@ -942,5 +986,7 @@ let todos = [];
             resultsDiv.innerHTML = `<div class="${className}"><p>${message}</p></div>`;
         }
     </script>
+    <script src="../../js/video-config.js"></script>
 </body>
+
 </html>
